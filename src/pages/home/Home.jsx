@@ -4,9 +4,10 @@ import { useEffect, useState, useRef } from "react";
 import { motion as m, useScroll } from "framer-motion";
 
 // Side images
-import Img_rocket from "../../assets/home_page/rocket with stars.svg";
-import Img_downarrow from "../../assets/home_page/downarrow.svg";
+// for animating change this to svgr, replace img tag with respective svgr component
+import { ReactComponent as Img_rocket } from "../../assets/home_page/rocket with stars.svg";
 import Img_satellite from "../../assets/home_page/satellite.svg";
+import { ReactComponent as Img_downarrow } from "../../assets/home_page/downarrow.svg";
 import Img_saturn from "../../assets/home_page/saturn.svg";
 import Img_cloud from "../../assets/home_page/cloud.svg";
 import Img_sun from "../../assets/home_page/sun.svg";
@@ -14,6 +15,7 @@ import Img_sun from "../../assets/home_page/sun.svg";
 // Logos
 import logo_light from "../../assets/common/DSC JSS Science and Technology University Light Logo.png";
 import logo_dark from "../../assets/common/DSC JSS Science and Technology University Dark Logo.png";
+import Card from "../../components/home_card/Card";
 
 const cardVariants = {
   hidden: { opacity: 0 },
@@ -51,7 +53,7 @@ const Home = ({ isDark, setIsDark }) => {
       {/* 3.5rem is the height of the navbar */}
       <div
         ref={scrollContainer}
-        className=" snap-y snap-mandatory  overflow-y-scroll h-[calc(100vh_-_3.5rem)]  bg-lightbg dark:bg-darkbg font-sans"
+        className=" scroll-smooth snap-y snap-mandatory  overflow-y-scroll h-[calc(100vh_-_3.5rem)]  bg-lightbg dark:bg-darkbg font-sans"
       >
         {/* First welcome section */}
         <div className="snap-start h-[calc(100vh_-_3.5rem)]">
@@ -77,221 +79,132 @@ const Home = ({ isDark, setIsDark }) => {
               </section>
             </article>
             <section className="hidden md:block h-full">
-              <img src={Img_rocket} alt="" className=" object-contain h-full" />
+              <Img_rocket />
+
+              {/* <img src={Img_rocket} alt="" className=" object-contain h-full" /> */}
             </section>
           </div>
 
           <a href="#focus">
-            <img
+            {/* <img
               src={Img_downarrow}
               className="object-contain h-11 w-full mx-auto"
               alt=""
-            />
+            /> */}
+            <Img_downarrow className="object-contain h-11 w-full mx-auto" />
           </a>
         </div>
 
-        {/* Our Focus */}
-        <m.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.1 }}
-          variants={cardVariants}
-          id="focus"
-          className="relative object-contain scroll-smooth snap-start h-[calc(100vh_-_3.5rem)]"
+        <Card
+          title="Our Focus"
+          id={"focus"}
+          nextId={"aboutjss"}
+          content={
+            "Our Focus We Believe that Together we can. We not only conduct events to impart learning but also various other activities and competetions!"
+          }
+          FloatImg={() => (
+            <img
+              src={Img_satellite}
+              className="hidden md:block absolute top-0 left-0"
+              alt=""
+            />
+          )}
         >
-          <img
-            src={Img_satellite}
-            className="hidden md:block absolute top-0 left-0"
-            alt=""
-          />
-          <article className="h-[calc(100vh_-_7rem)] dark:text-lightbg flex flex-col justify-center items-center gap-y-10">
-            <h3 className=" text-5xl font-bold">Our Focus</h3>
-            <p className=" max-w-sm text-center text-xl  tracking-wide">
-              Our Focus We Believe that Together we can. We not only conduct
-              events to impart learning but also various other activities and
-              competetions!
-            </p>
-            <p className="text-lg tracking-wider font-medium">
-              TEAM- Together Each Achieve More
-            </p>
-          </article>
-          <a href="#" className=" absolute bottom-11 w-full">
+          <p className="text-lg tracking-wider font-medium">
+            TEAM- Together Each Achieve More
+          </p>
+        </Card>
+
+        <Card
+          title="About JSSSTU"
+          id={"aboutjss"}
+          content={
+            "JSS Science and Technology University, popularly known as SJCE or JSSSTU, is a private university located in Mysore, Karnataka, India. SJCE was established in 1963. JSS S&T University is committed to deliver high quality educational opportunities for youth and transform not only its neighborhood but offer courses to equip aspiring youth to meet the global needs of industry in every sector."
+          }
+          FloatImg={() => (
             <img
-              src={Img_downarrow}
-              className="object-contain h-11 mx-auto "
+              src={Img_saturn}
+              className="absolute hidden md:block bottom-0 right-0"
               alt=""
             />
-            {/* <div className="object-contain h-11 mx-auto ">
-              <svg
-                class="object-contain h-11 mx-auto "
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 28.55 44.393"
-              >
-                <g
-                  id="Group_2"
-                  data-name="Group 2"
-                  transform="translate(-966 -967.48)"
-                >
-                  <path
-                    id="Path_1"
-                    className=" stroke-slate-400"
-                    data-name="Path 1"
-                    d="M982,967.98V1011.1"
-                    transform="translate(-1.5)"
-                    fill="none"
-                    stroke="#141414"
-                    stroke-linecap="round"
-                    stroke-width="1"
-                  ></path>
-                  <path
-                    id="Path_2"
-                    data-name="Path 2"
-                    d="M966.813,997.8l13.973,13.577L994.363,997.8"
-                    transform="translate(-0.313)"
-                    fill="none"
-                    stroke="#141414"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1"
-                  ></path>
-                </g>
-              </svg>
-            </div> */}
-          </a>
-        </m.div>
+          )}
+        >
+          <button className=" bg-blue-500 rounded-lg p-2 text-lg text-lightbg">
+            Official Website
+          </button>
+        </Card>
 
-        {/* About Jssstu */}
-        <div className=" relative snap-start h-[calc(100vh_-_3.5rem)]  ">
-          <img
-            src={Img_saturn}
-            className="absolute  hidden md:block  bottom-0 right-0"
-            alt=""
-          />
-
-          <article className="h-[calc(100vh_-_7rem)] dark:text-lightbg flex flex-col justify-center items-center gap-y-8">
-            <h3 className=" text-5xl font-bold">About JSSSTU</h3>
-            <p className=" max-w-lg text-center text-xl  tracking-wide">
-              JSS Science and Technology University, popularly known as SJCE or
-              JSSSTU, is a private university located in Mysore, Karnataka,
-              India. SJCE was established in 1963. JSS S&T University is
-              committed to deliver high quality educational opportunities for
-              youth and transform not only its neighborhood but offer courses to
-              equip aspiring youth to meet the global needs of industry in every
-              sector.
-            </p>
-            <button className=" bg-blue-500 rounded-lg p-2 text-lg text-lightbg">
-              Official Website
-            </button>
-          </article>
-          <a href="#" className=" absolute bottom-11 w-full">
+        <Card
+          title={"Get to know the team"}
+          content={
+            "We've got a strong team filled with passionate developers, dexterous designers and competent organisers!"
+          }
+          FloatImg={() => (
             <img
-              src={Img_downarrow}
-              className="object-contain h-11 mx-auto mt-5 "
+              src={Img_satellite}
+              className="hidden md:block absolute top-0 left-0"
               alt=""
             />
-          </a>
-        </div>
+          )}
+        >
+          <button className=" bg-blue-500 rounded-lg p-2 text-lg text-lightbg">
+            Meet The Team!
+          </button>
+        </Card>
 
-        {/* Know the team */}
-        <div className=" relative snap-start h-[calc(100vh_-_3.5rem)]  ">
-          <img
-            src={Img_satellite}
-            className="hidden md:block absolute top-0 left-0"
-            alt=""
-          />
-          <article className="h-[calc(100vh_-_7rem)] dark:text-lightbg flex flex-col justify-center items-center gap-y-10">
-            <h3 className="text-center text-5xl font-bold">
-              Get to know the team
-            </h3>
-            <p className=" max-w-lg text-center text-xl  tracking-wide">
-              We've got a strong team filled with passionate developers,
-              dexterous designers and competent organisers!
-            </p>
-            <button className=" bg-blue-500 rounded-lg p-2 text-lg text-lightbg">
-              Meet The Team!
-            </button>
-          </article>
-          <a href="#" className=" absolute bottom-11 w-full">
+        <Card
+          title={"Projects"}
+          content={
+            "Proper execution of Knowledge leads to successful projects. Here are a few projects built by our team."
+          }
+          FloatImg={() => (
             <img
-              src={Img_downarrow}
-              className="object-contain h-11 mx-auto "
+              src={Img_cloud}
+              className="hidden md:block absolute bottom-0 right-0"
               alt=""
             />
-          </a>
-        </div>
+          )}
+        >
+          <button className=" bg-blue-500 rounded-lg p-2 text-lg text-lightbg">
+            Projects
+          </button>
+        </Card>
 
-        {/* The Projects */}
-        <div className=" relative snap-start h-[calc(100vh_-_3.5rem)]  ">
-          <img
-            src={Img_cloud}
-            className="hidden md:block absolute bottom-0 right-0"
-            alt=""
-          />
-          <article className="h-[calc(100vh_-_7rem)] dark:text-lightbg flex flex-col justify-center items-center gap-y-10">
-            <h3 className="text-center text-5xl font-bold">Projects</h3>
-            <p className=" max-w-lg text-center text-xl  tracking-wide">
-              Proper execution of Knowledge leads to successful projects. Here
-              are a few projects built by our team.
-            </p>
-            <button className=" bg-blue-500 rounded-lg p-2 text-lg text-lightbg">
-              Meet The Team!
-            </button>
-          </article>
-          <a href="#" className=" absolute bottom-11 w-full">
+        <Card
+          title={"Our Blog"}
+          content={
+            "You learn by sharing your knowledge and we emphasize it! Our team disseminates their knowledge on Medium often."
+          }
+          FloatImg={() => (
             <img
-              src={Img_downarrow}
-              className="object-contain h-11 mx-auto "
+              src={Img_sun}
+              className="hidden md:block absolute top-10 right-10"
               alt=""
             />
-          </a>
-        </div>
+          )}
+        >
+          <button className=" bg-blue-500 rounded-lg p-2 text-lg text-lightbg">
+            Check It Out!
+          </button>
+        </Card>
 
-        {/* Blog */}
-        <div className=" relative snap-start h-[calc(100vh_-_3.5rem)]  ">
-          <img
-            src={Img_sun}
-            className="hidden md:block absolute top-10 right-10"
-            alt=""
-          />
-          <article className="h-[calc(100vh_-_7rem)] dark:text-lightbg flex flex-col justify-center items-center gap-y-10">
-            <h3 className="text-center text-5xl font-bold">Our Blog</h3>
-            <p className=" max-w-lg text-center text-xl  tracking-wide">
-              You learn by sharing your knowledge and we emphasize it! Our team
-              disseminates their knowledge on Medium often.
-            </p>
-            <button className=" bg-blue-500 rounded-lg p-2 text-lg text-lightbg">
-              Check It Out!
-            </button>
-          </article>
-          <a href="#" className=" absolute bottom-11 w-full">
+        <Card
+          title={"Contact Us"}
+          content={
+            "Reach out to us on these platforms! We’re just a message away."
+          }
+          FloatImg={() => (
             <img
-              src={Img_downarrow}
-              className="object-contain h-11 mx-auto "
+              src={Img_saturn}
+              className="absolute  hidden md:block  bottom-0 right-0"
               alt=""
             />
-          </a>
-        </div>
-
-        <div className=" relative snap-start h-[calc(100vh_-_3.5rem)]  ">
-          <img
-            src={Img_saturn}
-            className="absolute  hidden md:block  bottom-0 right-0"
-            alt=""
-          />
-          <article className="h-[calc(100vh_-_7rem)] dark:text-lightbg  flex flex-col justify-center items-center gap-y-8">
-            <h3 className=" text-5xl font-bold">Contact Us</h3>
-            <p className=" max-w-lg text-center text-xl  tracking-wide">
-              Reach out to us on these platforms! We’re just a message away.
-            </p>
-          </article>
-          <a href="#" className=" absolute bottom-11 w-full">
-            <img
-              src={Img_downarrow}
-              className="object-contain h-11 mx-auto mt-5 "
-              alt=""
-            />
-          </a>
-        </div>
+          )}
+        >
+          <button className=" bg-blue-500 rounded-lg p-2 text-lg text-lightbg">
+            icons
+          </button>
+        </Card>
 
         <div className="snap-start h-[calc(100vh_-_3.5rem)]">hello</div>
       </div>

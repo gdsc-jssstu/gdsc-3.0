@@ -1,4 +1,4 @@
-<svg width="480" height="690" viewBox="0 0 480 690" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg  className="object-contain h-full  w-full"  width="480" height="690" viewBox="0 0 480 690" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <rect x="383" y="638" width="52" height="52" fill="url(#pattern0)"/>
 <rect x="34" y="235" width="59" height="38" fill="url(#pattern1)"/>
 <rect x="451" y="25" width="29" height="47" fill="url(#pattern2)"/>
