@@ -1,0 +1,8 @@
+/* .snap_container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+.snap_children {
+    scroll-snap-align: start;
+} */
