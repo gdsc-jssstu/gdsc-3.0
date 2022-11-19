@@ -1,9 +1,10 @@
 import Navbar from "../../components/navbar/Navbar";
 import "./home.style.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { motion as m, useScroll } from "framer-motion";
 
 // Side images
-import Img_rocket from "../../assets/home_page/rocket.svg";
+import Img_rocket from "../../assets/home_page/rocket with stars.svg";
 import Img_downarrow from "../../assets/home_page/downarrow.svg";
 import Img_satellite from "../../assets/home_page/satellite.svg";
 import Img_saturn from "../../assets/home_page/saturn.svg";
@@ -15,14 +16,33 @@ import logo_light from "../../assets/common/DSC JSS Science and Technology Unive
 import logo_dark from "../../assets/common/DSC JSS Science and Technology University Dark Logo.png";
 
 const Home = ({ isDark, setIsDark }) => {
+  const scrollContainer = useRef(null);
+  const { scrollY } = useScroll({
+    container: scrollContainer,
+  });
+
+  const [scrollYValue, setScrollYValue] = useState(0);
+
+  useEffect(() => {
+    return scrollY.onChange((latest) => {
+      console.log("Page scroll: ", latest);
+      setScrollYValue(latest);
+    });
+  }, []);
   return (
     <div className="">
-      <header className=" sticky top-0">
-        <Navbar isDark={isDark} setIsDark={setIsDark} />
+      <header className="sticky top-0">
+        <Navbar
+          isDark={isDark}
+          setIsDark={setIsDark}
+          scrollYValue={scrollYValue}
+        />
       </header>
-
       {/* 3.5rem is the height of the navbar */}
-      <div className="snap-y snap-mandatory overflow-y-scroll h-[calc(100vh_-_3.5rem)]  bg-lightbg dark:bg-darkbg font-sans">
+      <div
+        ref={scrollContainer}
+        className="snap-y snap-mandatory overflow-y-scroll h-[calc(100vh_-_3.5rem)]  bg-lightbg dark:bg-darkbg font-sans"
+      >
         {/* First welcome section */}
         <div className="snap-start h-[calc(100vh_-_3.5rem)]">
           <div className="px-4 flex  justify-around items-center h-[calc(100%_-_5rem)] ">
@@ -31,7 +51,7 @@ const Home = ({ isDark, setIsDark }) => {
                 <img
                   src={isDark ? logo_dark : logo_light}
                   alt=""
-                  srcset=""
+                  srcSet=""
                   className=" max-w-md md:max-w-lg "
                 />
                 <p className="mt-5 max-w-sm md:max-w-md tracking-wide text-justify text-lg">
@@ -97,6 +117,7 @@ const Home = ({ isDark, setIsDark }) => {
             className="absolute  hidden md:block  bottom-0 right-0"
             alt=""
           />
+
           <article className="h-[calc(100vh_-_7rem)] dark:text-lightbg flex flex-col justify-center items-center gap-y-8">
             <h3 className=" text-5xl font-bold">About JSSSTU</h3>
             <p className=" max-w-lg text-center text-xl  tracking-wide">
