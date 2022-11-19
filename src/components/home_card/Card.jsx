@@ -1,5 +1,6 @@
 import { motion as m } from "framer-motion";
-import { ReactComponent as Img_downarrow } from "../../assets/home_page/downarrow.svg";
+import Img_downarrow_light from "../../assets/home_page/downarrow_light.svg";
+import Img_downarrow_dark from "../../assets/home_page/downarrow_dark.svg";
 
 const cardVariants = {
   hidden: { opacity: 0 },
@@ -12,6 +13,8 @@ const cardVariants = {
 };
 
 const Card = ({
+  isEnd,
+  isDark,
   FloatImg,
   children,
   title,
@@ -40,12 +43,21 @@ const Card = ({
         </p>
         {children}
       </article>
-      <span
-        onClick={() => handleRef(nextRef)}
-        className=" absolute bottom-11 w-full"
-      >
-        <Img_downarrow className="object-contain h-11 w-full mx-auto" />
-      </span>
+      {!isEnd && (
+        <span className="absolute bottom-11 w-full  ">
+          {/* <Img_downarrow
+            onClick={() => handleRef(nextRef)}
+            className="object-contain h-11  mx-auto cursor-pointer"
+          /> */}
+          <img
+            onClick={() => handleRef(nextRef)}
+            src={isDark ? Img_downarrow_dark : Img_downarrow_light}
+            className="object-contain h-11  mx-auto cursor-pointer"
+            alt=""
+            srcSet=""
+          />
+        </span>
+      )}
     </m.div>
   );
 };

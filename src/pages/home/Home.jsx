@@ -1,11 +1,11 @@
-import "./home.style.css";
-import { Link } from "react-router-dom";
+import { useRef } from "react";
 
 // Side images
-// for animating change this to svgr, replace img tag with respective svgr component
+// for animating svg, change this to svgr, replace img tag with respective svgr component
 import { ReactComponent as Img_rocket } from "../../assets/home_page/rocket with stars.svg";
 import Img_satellite from "../../assets/home_page/satellite.svg";
-import { ReactComponent as Img_downarrow } from "../../assets/home_page/downarrow.svg";
+import Img_downarrow_light from "../../assets/home_page/downarrow_light.svg";
+import Img_downarrow_dark from "../../assets/home_page/downarrow_dark.svg";
 import Img_saturn from "../../assets/home_page/saturn.svg";
 import Img_cloud from "../../assets/home_page/cloud.svg";
 import Img_sun from "../../assets/home_page/sun.svg";
@@ -14,21 +14,10 @@ import Img_sun from "../../assets/home_page/sun.svg";
 import logo_light from "../../assets/common/DSC JSS Science and Technology University Light Logo.png";
 import logo_dark from "../../assets/common/DSC JSS Science and Technology University Dark Logo.png";
 import Card from "../../components/home_card/Card";
-import { useRef } from "react";
-
-const cardVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 1,
-    },
-  },
-};
 
 const Home = ({ isDark, scrollContainer }) => {
   const handleRef = (ref) => {
-    ref.current.scrollIntoView();
+    if (ref) ref.current.scrollIntoView();
   };
 
   const ourFocusRef = useRef(null);
@@ -37,6 +26,9 @@ const Home = ({ isDark, scrollContainer }) => {
   const projectsRef = useRef(null);
   const ourBlogRef = useRef(null);
   const contactUsRef = useRef(null);
+  const joinUsRef = useRef(null);
+  const submitIdeaRef = useRef(null);
+  const partnersRef = useRef(null);
 
   return (
     <main
@@ -73,7 +65,11 @@ const Home = ({ isDark, scrollContainer }) => {
         </div>
 
         <span onClick={() => handleRef(ourFocusRef)}>
-          <Img_downarrow className="object-contain h-11 w-full mx-auto" />
+          <img
+            src={isDark ? Img_downarrow_dark : Img_downarrow_light}
+            alt=""
+            className="object-contain h-11 w-full mx-auto"
+          />
         </span>
       </div>
 
@@ -81,6 +77,7 @@ const Home = ({ isDark, scrollContainer }) => {
         title="Our Focus"
         currentRef={ourFocusRef}
         nextRef={aboutJSSRef}
+        isDark={isDark}
         handleRef={handleRef}
         id={"focus"}
         nextId={"aboutjss"}
@@ -104,6 +101,7 @@ const Home = ({ isDark, scrollContainer }) => {
         title="About JSSSTU"
         handleRef={handleRef}
         currentRef={aboutJSSRef}
+        isDark={isDark}
         nextRef={getToKnowRef}
         content={
           "JSS Science and Technology University, popularly known as SJCE or JSSSTU, is a private university located in Mysore, Karnataka, India. SJCE was established in 1963. JSS S&T University is committed to deliver high quality educational opportunities for youth and transform not only its neighborhood but offer courses to equip aspiring youth to meet the global needs of industry in every sector."
@@ -125,6 +123,7 @@ const Home = ({ isDark, scrollContainer }) => {
         title={"Get to know the team"}
         currentRef={getToKnowRef}
         nextRef={projectsRef}
+        isDark={isDark}
         handleRef={handleRef}
         content={
           "We've got a strong team filled with passionate developers, dexterous designers and competent organisers!"
@@ -137,7 +136,7 @@ const Home = ({ isDark, scrollContainer }) => {
           />
         )}
       >
-        <button className=" bg-blue-500 rounded-lg p-2 text-lg text-lightbg">
+        <button className=" bg-blue-500 rounded-lg px-6 py-2 text-lg text-lightbg">
           Meet The Team!
         </button>
       </Card>
@@ -146,6 +145,7 @@ const Home = ({ isDark, scrollContainer }) => {
         title={"Projects"}
         currentRef={projectsRef}
         nextRef={ourBlogRef}
+        isDark={isDark}
         handleRef={handleRef}
         content={
           "Proper execution of Knowledge leads to successful projects. Here are a few projects built by our team."
@@ -158,7 +158,7 @@ const Home = ({ isDark, scrollContainer }) => {
           />
         )}
       >
-        <button className=" bg-blue-500 rounded-lg p-2 text-lg text-lightbg">
+        <button className=" bg-blue-500 rounded-lg px-6 py-2 text-lg text-lightbg">
           Projects
         </button>
       </Card>
@@ -167,6 +167,7 @@ const Home = ({ isDark, scrollContainer }) => {
         title={"Our Blog"}
         currentRef={ourBlogRef}
         nextRef={contactUsRef}
+        isDark={isDark}
         handleRef={handleRef}
         content={
           "You learn by sharing your knowledge and we emphasize it! Our team disseminates their knowledge on Medium often."
@@ -179,7 +180,7 @@ const Home = ({ isDark, scrollContainer }) => {
           />
         )}
       >
-        <button className=" bg-blue-500 rounded-lg p-2 text-lg text-lightbg">
+        <button className=" bg-blue-500 rounded-lg px-6 py-2 text-lg text-lightbg">
           Check It Out!
         </button>
       </Card>
@@ -187,6 +188,8 @@ const Home = ({ isDark, scrollContainer }) => {
       <Card
         title={"Contact Us"}
         currentRef={contactUsRef}
+        nextRef={joinUsRef}
+        isDark={isDark}
         handleRef={handleRef}
         content={
           "Reach out to us on these platforms! We’re just a message away."
@@ -199,12 +202,82 @@ const Home = ({ isDark, scrollContainer }) => {
           />
         )}
       >
-        <button className=" bg-blue-500 rounded-lg p-2 text-lg text-lightbg">
-          icons
+        <button className=" bg-blue-500 rounded-lg px-6 py-2 text-lg text-lightbg">
+          placeholder for icons
         </button>
       </Card>
 
-      <div className="snap-start h-[calc(100vh_-_3.5rem)]">hello</div>
+      <Card
+        title={"Join us!"}
+        currentRef={joinUsRef}
+        nextRef={submitIdeaRef}
+        isDark={isDark}
+        handleRef={handleRef}
+        content={
+          "Ready to hang out? Grab a seat in a voice channel. Designed so you can pop in and out of voice and video conversations throughout the day. Play Access t a global network of student leaders, games, have fun and enjoy geek time with us. professional community organizers, industry experts, and Googlers to gain mentorship and share knowledge."
+        }
+        FloatImg={() => (
+          <img
+            src={Img_satellite}
+            className="hidden md:block absolute top-0 left-0"
+            alt=""
+          />
+        )}
+      >
+        <div className=" flex flex-col gap-y-4 sm:flex-row sm:gap-y-0 gap-x-10 md:gap-x-20">
+          <button className=" bg-blue-500 rounded-lg px-6 py-2 text-lg text-lightbg">
+            Discord
+          </button>
+          <button className=" bg-blue-500 rounded-lg px-6 py-2 text-lg text-lightbg">
+            Subscribe
+          </button>
+        </div>
+      </Card>
+
+      <Card
+        title={"Submit an Idea"}
+        currentRef={submitIdeaRef}
+        nextRef={partnersRef}
+        isDark={isDark}
+        handleRef={handleRef}
+        content={
+          "Tried implementing your idea and got stuck? Don't worry. We got your back! Drop your idea here and we will help you it!"
+        }
+        FloatImg={() => (
+          <img
+            src={Img_sun}
+            className="hidden md:block absolute top-10 right-10"
+            alt=""
+          />
+        )}
+      >
+        <button className=" bg-blue-500 rounded-lg px-6 py-2 text-lg text-lightbg">
+          Submit Ideas
+        </button>
+      </Card>
+
+      <Card
+        title={"Partners"}
+        currentRef={partnersRef}
+        nextRef={null}
+        isDark={isDark}
+        isEnd={true}
+        handleRef={handleRef}
+        content={
+          "Partners help us reach our goals and grow our community! Thank You, for being one of them. If you are interested in being a Speaker at one of Our events or want to Sponsor us to get brand exposure and elevate your business identity within the community, then drop us the details."
+        }
+        FloatImg={() => (
+          <img
+            src={Img_cloud}
+            className="hidden md:block absolute bottom-0 right-0"
+            alt=""
+          />
+        )}
+      >
+        <button className=" bg-blue-500 rounded-lg px-6 py-2 text-lg text-lightbg">
+          Projects
+        </button>
+      </Card>
     </main>
   );
 };

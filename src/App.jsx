@@ -16,7 +16,6 @@ function App() {
 
   useEffect(() => {
     return scrollY.onChange((latest) => {
-      console.log("Page scroll: ", latest);
       setScrollYValue(latest);
     });
   }, []);
