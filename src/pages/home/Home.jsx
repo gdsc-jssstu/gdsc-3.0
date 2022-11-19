@@ -15,6 +15,16 @@ import Img_sun from "../../assets/home_page/sun.svg";
 import logo_light from "../../assets/common/DSC JSS Science and Technology University Light Logo.png";
 import logo_dark from "../../assets/common/DSC JSS Science and Technology University Dark Logo.png";
 
+const cardVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 1,
+    },
+  },
+};
+
 const Home = ({ isDark, setIsDark }) => {
   const scrollContainer = useRef(null);
   const { scrollY } = useScroll({
@@ -41,7 +51,7 @@ const Home = ({ isDark, setIsDark }) => {
       {/* 3.5rem is the height of the navbar */}
       <div
         ref={scrollContainer}
-        className="snap-y snap-mandatory overflow-y-scroll h-[calc(100vh_-_3.5rem)]  bg-lightbg dark:bg-darkbg font-sans"
+        className=" snap-y snap-mandatory  overflow-y-scroll h-[calc(100vh_-_3.5rem)]  bg-lightbg dark:bg-darkbg font-sans"
       >
         {/* First welcome section */}
         <div className="snap-start h-[calc(100vh_-_3.5rem)]">
@@ -71,7 +81,7 @@ const Home = ({ isDark, setIsDark }) => {
             </section>
           </div>
 
-          <a href="#">
+          <a href="#focus">
             <img
               src={Img_downarrow}
               className="object-contain h-11 w-full mx-auto"
@@ -81,7 +91,11 @@ const Home = ({ isDark, setIsDark }) => {
         </div>
 
         {/* Our Focus */}
-        <div
+        <m.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.1 }}
+          variants={cardVariants}
           id="focus"
           className="relative object-contain scroll-smooth snap-start h-[calc(100vh_-_3.5rem)]"
         >
@@ -107,8 +121,44 @@ const Home = ({ isDark, setIsDark }) => {
               className="object-contain h-11 mx-auto "
               alt=""
             />
+            {/* <div className="object-contain h-11 mx-auto ">
+              <svg
+                class="object-contain h-11 mx-auto "
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 28.55 44.393"
+              >
+                <g
+                  id="Group_2"
+                  data-name="Group 2"
+                  transform="translate(-966 -967.48)"
+                >
+                  <path
+                    id="Path_1"
+                    className=" stroke-slate-400"
+                    data-name="Path 1"
+                    d="M982,967.98V1011.1"
+                    transform="translate(-1.5)"
+                    fill="none"
+                    stroke="#141414"
+                    stroke-linecap="round"
+                    stroke-width="1"
+                  ></path>
+                  <path
+                    id="Path_2"
+                    data-name="Path 2"
+                    d="M966.813,997.8l13.973,13.577L994.363,997.8"
+                    transform="translate(-0.313)"
+                    fill="none"
+                    stroke="#141414"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1"
+                  ></path>
+                </g>
+              </svg>
+            </div> */}
           </a>
-        </div>
+        </m.div>
 
         {/* About Jssstu */}
         <div className=" relative snap-start h-[calc(100vh_-_3.5rem)]  ">
