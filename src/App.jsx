@@ -49,7 +49,7 @@ function App() {
   );
 }
 
-const LayoutWithNav = ({ isDark, setIsDark, scrollYValue, children }) => {
+const LayoutWithNav = ({ isDark, setIsDark, scrollYValue }) => {
   return (
     <div className={`${isDark ? "dark" : " "}`}>
       <header className="sticky top-0">
