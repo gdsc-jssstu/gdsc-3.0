@@ -1,6 +1,6 @@
 import { motion as m } from "framer-motion";
-import Img_downarrow_light from "../../assets/home_page/downarrow_light.svg";
-import Img_downarrow_dark from "../../assets/home_page/downarrow_dark.svg";
+import Img_downarrow_light from "../assets/home_page/downarrow_light.svg";
+import Img_downarrow_dark from "../assets/home_page/downarrow_dark.svg";
 
 const cardVariants = {
   hidden: { opacity: 1 },

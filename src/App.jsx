@@ -1,5 +1,5 @@
-import Navbar from "./components/navbar/Navbar";
-import Home from "./pages/home/Home";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
 import { useEffect, useState, useRef } from "react";
 import { motion as m, useScroll } from "framer-motion";
 import { BrowserRouter, Routes, Outlet, Route } from "react-router-dom";

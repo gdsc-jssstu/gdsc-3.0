@@ -2,19 +2,19 @@ import { useRef } from "react";
 
 // Side images
 // for animating svg, change this to svgr, replace img tag with respective svgr component
-import { ReactComponent as Img_rocket } from "../../assets/home_page/rocket with stars.svg";
-import Img_satellite from "../../assets/home_page/satellite.svg";
-import Img_downarrow_light from "../../assets/home_page/downarrow_light.svg";
-import Img_downarrow_dark from "../../assets/home_page/downarrow_dark.svg";
-import Img_saturn from "../../assets/home_page/saturn.svg";
-import Img_cloud from "../../assets/home_page/cloud.svg";
-import Img_sun from "../../assets/home_page/sun.svg";
-import Img_rocket_text from "../../assets/home_page/rocket-ship-remove2.png";
+import { ReactComponent as Img_rocket } from "../assets/home_page/rocket with stars.svg";
+import Img_satellite from "../assets/home_page/satellite.svg";
+import Img_downarrow_light from "../assets/home_page/downarrow_light.svg";
+import Img_downarrow_dark from "../assets/home_page/downarrow_dark.svg";
+import Img_saturn from "../assets/home_page/saturn.svg";
+import Img_cloud from "../assets/home_page/cloud.svg";
+import Img_sun from "../assets/home_page/sun.svg";
+import Img_rocket_text from "../assets/home_page/rocket-ship-remove2.png";
 
 // Logos
-import logo_light from "../../assets/common/DSC JSS Science and Technology University Light Logo.png";
-import logo_dark from "../../assets/common/DSC JSS Science and Technology University Dark Logo.png";
-import Card from "../../components/home_card/Card";
+import logo_light from "../assets/common/DSC JSS Science and Technology University Light Logo.png";
+import logo_dark from "../assets/common/DSC JSS Science and Technology University Dark Logo.png";
+import Card from "../components/HomeCard";
 import { motion as m } from "framer-motion";
 
 const Home = ({ isDark, scrollContainer }) => {

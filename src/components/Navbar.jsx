@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import logo_light from "../../assets/common/DSC JSS Science and Technology University Light Logo.png";
-import logo_dark from "../../assets/common/DSC JSS Science and Technology University Dark Logo.png";
-import img_sun from "../../assets/common/sun.svg";
-import img_moon from "../../assets/common/moon.svg";
+import logo_light from "../assets/common/DSC JSS Science and Technology University Light Logo.png";
+import logo_dark from "../assets/common/DSC JSS Science and Technology University Dark Logo.png";
+import img_sun from "../assets/common/sun.svg";
+import img_moon from "../assets/common/moon.svg";
 
 const Navbar = ({ isDark, setIsDark, scrollYValue }) => {
   return (
