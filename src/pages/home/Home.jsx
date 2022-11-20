@@ -9,11 +9,13 @@ import Img_downarrow_dark from "../../assets/home_page/downarrow_dark.svg";
 import Img_saturn from "../../assets/home_page/saturn.svg";
 import Img_cloud from "../../assets/home_page/cloud.svg";
 import Img_sun from "../../assets/home_page/sun.svg";
+import Img_rocket_text from "../../assets/home_page/rocket-ship-remove2.png";
 
 // Logos
 import logo_light from "../../assets/common/DSC JSS Science and Technology University Light Logo.png";
 import logo_dark from "../../assets/common/DSC JSS Science and Technology University Dark Logo.png";
 import Card from "../../components/home_card/Card";
+import { motion as m } from "framer-motion";
 
 const Home = ({ isDark, scrollContainer }) => {
   const handleRef = (ref) => {
@@ -33,7 +35,7 @@ const Home = ({ isDark, scrollContainer }) => {
   return (
     <main
       ref={scrollContainer}
-      className={`scroll-smooth snap-y snap-mandatory  overflow-y-scroll h-[calc(100vh_-_3.5rem)]  bg-lightbg dark:bg-darkbg font-sans`}
+      className="scroll-smooth snap-y snap-mandatory  overflow-y-scroll h-[calc(100vh_-_3.5rem)]  bg-lightbg dark:bg-darkbg font-sans"
     >
       {/* 3.5rem is the height of the navbar */}
       {/* First welcome section */}
@@ -53,14 +55,15 @@ const Home = ({ isDark, scrollContainer }) => {
                 community which inspires thousands. Join Us!
               </p>
             </section>
-            <section className=" space-x-4 my-2 font-semibold ">
+            <section className=" space-x-4 my-2 font-semibold text-lg">
               <span className=" text-red-500">Connect.</span>
               <span className=" text-yellow-500">Learn.</span>
               <span className=" text-green-500">Grow.</span>
             </section>
           </article>
           <section className="hidden md:block h-full">
-            <Img_rocket />
+            {/* <Img_rocket /> */}
+            <img src={Img_rocket_text} alt="" />
           </section>
         </div>
 
@@ -224,7 +227,7 @@ const Home = ({ isDark, scrollContainer }) => {
           />
         )}
       >
-        <div className=" flex flex-col gap-y-4 sm:flex-row sm:gap-y-0 gap-x-10 md:gap-x-20">
+        <div className=" flex flex-row  gap-y-4  gap-x-10 md:gap-x-20">
           <button className=" bg-blue-500 rounded-lg px-6 py-2 text-lg text-lightbg">
             Discord
           </button>
