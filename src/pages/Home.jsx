@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useContext } from "react";
 
 // Side images
 // for animating svg, change this to svgr, replace img tag with respective svgr component
@@ -15,12 +15,10 @@ import Img_rocket_text from "../assets/home_page/rocket-ship-remove2.png";
 import logo_light from "../assets/common/DSC JSS Science and Technology University Light Logo.png";
 import logo_dark from "../assets/common/DSC JSS Science and Technology University Dark Logo.png";
 import Card from "../components/HomeCard";
-import { motion as m } from "framer-motion";
+import ThemeContext from "../contexts/ThemeContext";
 
-const Home = ({ isDark, scrollContainer }) => {
-  const handleRef = (ref) => {
-    if (ref) ref.current.scrollIntoView();
-  };
+const Home = ({ scrollContainer }) => {
+  const { isDark } = useContext(ThemeContext);
 
   const ourFocusRef = useRef(null);
   const aboutJSSRef = useRef(null);
@@ -31,6 +29,10 @@ const Home = ({ isDark, scrollContainer }) => {
   const joinUsRef = useRef(null);
   const submitIdeaRef = useRef(null);
   const partnersRef = useRef(null);
+
+  const handleRef = (ref) => {
+    if (ref) ref.current.scrollIntoView();
+  };
 
   return (
     <main

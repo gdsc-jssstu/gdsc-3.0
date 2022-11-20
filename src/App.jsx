@@ -1,12 +1,12 @@
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import { useEffect, useState, useRef } from "react";
-import { motion as m, useScroll } from "framer-motion";
+import { useEffect, useState, useRef, useContext } from "react";
+import { useScroll } from "framer-motion";
 import { BrowserRouter, Routes, Outlet, Route } from "react-router-dom";
+import ThemeContext, { ThemeProvider } from "./contexts/ThemeContext";
 
 function App() {
-  const [isDark, setIsDark] = useState(false);
-
+  // Make this a context??
   const scrollContainer = useRef(null);
   const { scrollY } = useScroll({
     container: scrollContainer,
@@ -21,43 +21,32 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <LayoutWithNav
-              isDark={isDark}
-              setIsDark={setIsDark}
-              scrollYValue={scrollYValue}
-            />
-          }
-        >
+    <ThemeProvider>
+      <BrowserRouter>
+        <Routes>
           <Route
             path="/"
-            element={<Home isDark={isDark} scrollContainer={scrollContainer} />}
-          />
-          {/* add pages here */}
-        </Route>
-      </Routes>
-    </BrowserRouter>
-
-    // // only for previewing change this when implementing routes
-    // <div className={`App ${isDark ? "dark" : ""} `}>
-    //   <Home isDark={isDark} setIsDark={setIsDark} />
-    // </div>
+            element={<LayoutWithNav scrollYValue={scrollYValue} />}
+          >
+            <Route
+              path="/"
+              element={<Home scrollContainer={scrollContainer} />}
+            />
+            {/* add pages here */}
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
-const LayoutWithNav = ({ isDark, setIsDark, scrollYValue }) => {
+const LayoutWithNav = ({ scrollYValue }) => {
+  const { isDark } = useContext(ThemeContext);
+
   return (
     <div className={`${isDark ? "dark" : " "}`}>
       <header className="sticky top-0">
-        <Navbar
-          isDark={isDark}
-          setIsDark={setIsDark}
-          scrollYValue={scrollYValue}
-        />
+        <Navbar scrollYValue={scrollYValue} />
       </header>
       <Outlet />
     </div>

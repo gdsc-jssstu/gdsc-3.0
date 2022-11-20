@@ -1,12 +1,15 @@
-import { useEffect, useState } from "react";
+import { useContext } from "react";
 import logo_light from "../assets/common/DSC JSS Science and Technology University Light Logo.png";
 import logo_dark from "../assets/common/DSC JSS Science and Technology University Dark Logo.png";
 import img_sun from "../assets/common/sun.svg";
 import img_moon from "../assets/common/moon.svg";
+import ThemeContext from "../contexts/ThemeContext";
 
-const Navbar = ({ isDark, setIsDark, scrollYValue }) => {
+const Navbar = ({ scrollYValue }) => {
+  const { isDark, changeTheme } = useContext(ThemeContext);
+
   return (
-    // dont change the height of the navbar see, if you are changeing make sure to update the calc funcions in home component
+    // dont change the height of the navbar see if you are changeing, make sure to update the calc function (inside className) in HomeCard component
     <nav
       className={`flex justify-around md:justify-between  h-14  ${
         scrollYValue > 300
@@ -32,7 +35,7 @@ const Navbar = ({ isDark, setIsDark, scrollYValue }) => {
         <li className="whitespace-nowrap">Contact Us</li>
         <li
           className="mr-5 drop-shadow-lg rounded-full w-8 h-8"
-          onClick={() => setIsDark(!isDark)}
+          onClick={changeTheme}
         >
           <img src={isDark ? img_sun : img_moon} className="w-8  h-8" alt="" />
         </li>
