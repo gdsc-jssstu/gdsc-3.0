@@ -73,8 +73,7 @@ const Home = ({ scrollContainer }) => {
             </section>
           </article>
           <section className="hidden md:block h-full">
-            {/* <Img_rocket /> */}
-            <img src={Img_rocket_text} alt="" />
+            <Img_rocket />
           </section>
         </div>
 
