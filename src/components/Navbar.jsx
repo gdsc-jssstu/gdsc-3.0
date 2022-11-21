@@ -4,6 +4,7 @@ import logo_dark from "../assets/common/DSC JSS Science and Technology Universit
 import img_sun from "../assets/common/sun.svg";
 import img_moon from "../assets/common/moon.svg";
 import ThemeContext from "../contexts/ThemeContext";
+import { RiMoonFill, RiSunFill } from "react-icons/ri";
 
 const Navbar = ({ scrollYValue }) => {
   const { isDark, changeTheme } = useContext(ThemeContext);
@@ -34,10 +35,11 @@ const Navbar = ({ scrollYValue }) => {
         <li>Blog</li>
         <li className="whitespace-nowrap">Contact Us</li>
         <li
-          className="mr-5 drop-shadow-lg rounded-full w-8 h-8"
+          className="mr-5 cursor-pointer dark:hover:text-yellow-400  hover:scale-110 text-2xl "
           onClick={changeTheme}
         >
-          <img src={isDark ? img_sun : img_moon} className="w-8  h-8" alt="" />
+          {isDark ? <RiSunFill /> : <RiMoonFill />}
+          {/* <img src={isDark ? img_sun : img_moon} className="w-8  h-8" alt="" /> */}
         </li>
       </ul>
     </nav>
