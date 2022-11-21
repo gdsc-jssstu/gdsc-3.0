@@ -219,7 +219,7 @@ const Home = ({ scrollContainer }) => {
         {/* <button className=" bg-blue-500 rounded-lg px-6 py-2 text-lg text-lightbg">
           placeholder for icons
         </button> */}
-        <ul className="flex gap-x-4 text-4xl md:text-5xl">
+        <ul className="flex gap-x-4 text-4xl sm:text-5xl">
           <li className="  hover:scale-110 text-pink-600">
             <RiInstagramLine />
           </li>
