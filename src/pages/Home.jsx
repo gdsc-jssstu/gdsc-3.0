@@ -1,4 +1,6 @@
 import { useRef, useContext } from "react";
+import Card from "../components/HomeCard";
+import ThemeContext from "../contexts/ThemeContext";
 
 // Side images
 // for animating svg, change this to svgr, replace img tag with respective svgr component
@@ -14,8 +16,15 @@ import Img_rocket_text from "../assets/home_page/rocket-ship-remove2.png";
 // Logos
 import logo_light from "../assets/common/DSC JSS Science and Technology University Light Logo.png";
 import logo_dark from "../assets/common/DSC JSS Science and Technology University Dark Logo.png";
-import Card from "../components/HomeCard";
-import ThemeContext from "../contexts/ThemeContext";
+
+import {
+  RiInstagramLine,
+  RiLinkedinBoxFill,
+  RiGithubFill,
+  RiMediumFill,
+  RiYoutubeFill,
+  RiTwitterFill,
+} from "react-icons/ri";
 
 const Home = ({ scrollContainer }) => {
   const { isDark } = useContext(ThemeContext);
@@ -207,9 +216,29 @@ const Home = ({ scrollContainer }) => {
           />
         )}
       >
-        <button className=" bg-blue-500 rounded-lg px-6 py-2 text-lg text-lightbg">
+        {/* <button className=" bg-blue-500 rounded-lg px-6 py-2 text-lg text-lightbg">
           placeholder for icons
-        </button>
+        </button> */}
+        <ul className="flex gap-x-4 text-4xl md:text-5xl">
+          <li className="  hover:scale-110 text-pink-600">
+            <RiInstagramLine />
+          </li>
+          <li className="  hover:scale-110 text-blue-500">
+            <RiLinkedinBoxFill />
+          </li>
+          <li className=" hover:scale-110">
+            <RiGithubFill />
+          </li>
+          <li className="  hover:scale-110 rounded-full overflow-hidden">
+            <RiMediumFill />
+          </li>
+          <li className="  hover:scale-110 text-red-600">
+            <RiYoutubeFill />
+          </li>
+          <li className="  hover:scale-110  text-blue-600">
+            <RiTwitterFill />
+          </li>
+        </ul>
       </Card>
 
       <Card
