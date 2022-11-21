@@ -12,24 +12,26 @@ const Navbar = ({ scrollYValue }) => {
   return (
     // dont change the height of the navbar see if you are changeing, make sure to update the calc function (inside className) in HomeCard component
     <nav
-      className={`flex justify-around md:justify-between h-14  ${
+      className={`flex justify-around md:justify-between h-14 bg-lightnav dark:bg-darknav  drop-shadow-md `}
+    >
+      {/* ${
         scrollYValue > 300
           ? " bg-lightnav dark:bg-darknav drop-shadow-md"
           : "bg-lightbg  dark:bg-darkbg"
-      }`}
-    >
+      } */}
       <div>
         <img
           src={isDark ? logo_dark : logo_light}
           alt=""
           className={`${
-            scrollYValue > 300 ? " visible ml-7 " : "invisible ml-0"
+            scrollYValue > 300 ? " visible ml-7 " : "  invisible ml-0"
           } object-contain h-full`}
         />
       </div>
+      {/* ${scrollYValue > 300 ? " drop-shadow-0" : " drop-shadow-md"} */}
       <ul
         className={`px-4 
-        ${scrollYValue > 300 ? " drop-shadow-0" : " drop-shadow-md"}
+        
         bg-lightnav dark:bg-darknav hidden sm:flex text-sm gap-x-4 justify-end md:text-base md:gap-x-6 lg:gap-x-14 xl:gap-x-16 items-center dark:text-lightnav font-medium `}
       >
         <li>Home</li>
