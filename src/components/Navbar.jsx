@@ -22,11 +22,11 @@ const Navbar = ({ scrollYValue }) => {
           src={isDark ? logo_dark : logo_light}
           alt=""
           className={`${
-            scrollYValue > 300 ? " visible" : "invisible"
-          } object-contain  h-full`}
+            scrollYValue > 300 ? " visible  ml-7" : "invisible ml-0"
+          } object-contain h-full`}
         />
       </div>
-      <ul className="flex-1 hidden sm:flex text-sm gap-x-4 justify-end md:text-base md:gap-x-6 lg:gap-x-14 xl:gap-x-16 items-center dark:text-lightnav  lg:mx-10">
+      <ul className="px-4   hidden sm:flex text-sm gap-x-4 justify-end md:text-base md:gap-x-6 lg:gap-x-14 xl:gap-x-16 items-center dark:text-lightnav font-medium ">
         <li>Home</li>
         <li>Team</li>
         <li>Events</li>
