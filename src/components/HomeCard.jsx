@@ -44,7 +44,7 @@ const Card = ({
       whileInView="visible"
       viewport={{ once: false, amount: 0.1 }}
       variants={cardVariants}
-      className="relative snap-start h-[calc(100vh_-_3.5rem)]"
+      className="relative snap-start h-[calc(100vh_-_3.5rem)] overflow-hidden"
     >
       <span className="">
         <FloatImg />
