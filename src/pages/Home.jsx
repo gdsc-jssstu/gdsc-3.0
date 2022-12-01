@@ -50,9 +50,9 @@ const Home = ({ scrollContainer }) => {
     >
       {/* 3.5rem is the height of the navbar */}
       {/* First welcome section */}
-      <div className="snap-start h-[calc(100vh_-_3.5rem)]">
-        <div className="px-4 flex justify-around items-center h-[calc(100%_-_5rem)] ">
-          <article className="dark:text-lightbg space-y-5">
+      <div className="snap-start h-[calc(100vh_-_3.5rem)] ">
+        <div className=" relative px-4 flex justify-around items-center h-[calc(100%_-_5rem)] ">
+          <article className="dark:text-lightbg space-y-5 z-10">
             <section className="">
               <img
                 src={isDark ? logo_dark : logo_light}
@@ -72,7 +72,7 @@ const Home = ({ scrollContainer }) => {
               <span className=" text-green-500">Grow.</span>
             </section>
           </article>
-          <section className="hidden md:block h-full">
+          <section className="absolute md:relative md:block h-full">
             <Img_rocket />
           </section>
         </div>
