@@ -9,9 +9,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@material-tailwind/react": "^1.2.4",
+    "@sanity/client": "^3.4.1",
+    "@sanity/image-url": "^1.0.1",
+    "aos": "^2.3.4",
+    "babel-plugin-macros": "^3.1.0",
     "framer-motion": "^7.6.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.4.3",
     "vite-plugin-svgr": "^2.2.2"
   },
