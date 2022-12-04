@@ -46,9 +46,7 @@ const Card = ({
       variants={cardVariants}
       className="relative snap-start h-[calc(100vh_-_3.5rem)] overflow-hidden"
     >
-      <span className="">
-        <FloatImg />
-      </span>
+      <FloatImg />
 
       <article className="h-[calc(100vh_-_7rem)] dark:text-lightbg flex flex-col justify-center items-center gap-y-10">
         <m.h3
@@ -82,11 +80,7 @@ const Card = ({
         </m.span>
       </article>
       {!isEnd && (
-        <span className="absolute bottom-11 w-full  ">
-          {/* <Img_downarrow
-            onClick={() => handleRef(nextRef)}
-            className="object-contain h-11  mx-auto cursor-pointer"
-          /> */}
+        <span className="w-full invisible  sm:visible">
           <img
             onClick={() => handleRef(nextRef)}
             src={isDark ? Img_downarrow_dark : Img_downarrow_light}

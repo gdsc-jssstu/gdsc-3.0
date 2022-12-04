@@ -1,6 +1,7 @@
 import { useRef, useContext } from "react";
 import Card from "../components/HomeCard";
 import ThemeContext from "../contexts/ThemeContext";
+import { motion as m } from "framer-motion";
 
 // Side images
 // for animating svg, change this to svgr, replace img tag with respective svgr component
@@ -11,12 +12,13 @@ import Img_downarrow_dark from "../assets/home_page/downarrow_dark.svg";
 import Img_saturn from "../assets/home_page/saturn.svg";
 import Img_cloud from "../assets/home_page/cloud.svg";
 import Img_sun from "../assets/home_page/sun.svg";
-import Img_rocket_text from "../assets/home_page/rocket-ship-remove2.png";
+import Img_rocket_test from "../assets/home_page/rocket-ship-remove2.png";
 
 // Logos
 import logo_light from "../assets/common/DSC JSS Science and Technology University Light Logo.png";
 import logo_dark from "../assets/common/DSC JSS Science and Technology University Dark Logo.png";
 
+// Icons
 import {
   RiInstagramLine,
   RiLinkedinBoxFill,
@@ -52,7 +54,7 @@ const Home = ({ scrollContainer }) => {
       {/* First welcome section */}
       <div className="snap-start h-[calc(100vh_-_3.5rem)] ">
         <div className=" relative px-4 flex justify-around items-center h-[calc(100%_-_5rem)] ">
-          <article className="dark:text-lightbg space-y-5 z-10">
+          <article className="dark:text-lightbg md:space-y-5 z-10">
             <section className="">
               <img
                 src={isDark ? logo_dark : logo_light}
@@ -72,8 +74,25 @@ const Home = ({ scrollContainer }) => {
               <span className=" text-green-500">Grow.</span>
             </section>
           </article>
-          <section className="absolute md:relative md:block h-full">
-            <Img_rocket />
+          <section className="hidden relative w-1/3 md:block h-full overflow-hidden">
+            <m.img
+              initial={{ scale: 0.3 }}
+              whileInView={{ scale: 1 }}
+              transition={{ delay: 0.1 }}
+              className="absolute top-0 left-0 z-0"
+              src={Img_cloud}
+              alt=""
+              srcset=""
+            />
+            <m.img
+              initial={{ y: 500 }}
+              whileInView={{ y: 20 }}
+              transition={{ delay: 0.2 }}
+              viewport={{ once: false }}
+              src={Img_rocket_test}
+              alt=""
+              className="object-contain "
+            />
           </section>
         </div>
 
@@ -81,7 +100,7 @@ const Home = ({ scrollContainer }) => {
           <img
             src={isDark ? Img_downarrow_dark : Img_downarrow_light}
             alt=""
-            className="object-contain h-11 w-full mx-auto"
+            className="object-contain h-11 w-full mx-auto cursor-pointer"
           />
         </span>
       </div>
