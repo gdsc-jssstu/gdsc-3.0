@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import {Link} from "react-router-dom";
 import logo_light from "../assets/common/DSC JSS Science and Technology University Light Logo.png";
 import logo_dark from "../assets/common/DSC JSS Science and Technology University Dark Logo.png";
 import img_sun from "../assets/common/sun.svg";
@@ -12,7 +13,7 @@ const Navbar = ({ scrollYValue }) => {
   return (
     // dont change the height of the navbar see if you are changeing, make sure to update the calc function (inside className) in HomeCard component
     <nav
-      className={`flex justify-around md:justify-between h-14 bg-lightnav dark:bg-darknav  drop-shadow-md `}
+
     >
       {/* ${
         scrollYValue > 300
@@ -25,19 +26,10 @@ const Navbar = ({ scrollYValue }) => {
           alt=""
           className={`${
             scrollYValue > 300 ? " visible ml-7 " : "  invisible ml-0"
-          } object-contain h-full`}
-        />
-      </div>
-      {/* ${scrollYValue > 300 ? " drop-shadow-0" : " drop-shadow-md"} */}
-      <ul
-        className={`px-4 
-        
-        bg-lightnav dark:bg-darknav hidden sm:flex text-sm gap-x-4 justify-end md:text-base md:gap-x-6 lg:gap-x-14 xl:gap-x-16 items-center dark:text-lightnav font-medium `}
-      >
-        <li>Home</li>
+
         <li>Team</li>
-        <li>Events</li>
-        <li>Projects</li>
+        <li><Link to="/Events">Events</Link></li>
+        <li><Link to="/Projects">Projects</Link></li>
         <li>Blog</li>
         <li className="whitespace-nowrap">Contact Us</li>
         <li
