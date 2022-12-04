@@ -30,7 +30,7 @@ const ProjectsCard = ({title,content,links,img}) => {
       initial="hidden"
       whileInView="visible"
       custom={1}
-      viewport={{ once: false, amount: 0.1 }}
+      viewport={{ once: true, amount: 0.1 }}
       variants={delayEntryVariants}
       className="w-full rounded-t-lg" 
       src={imageUrlFor(img).url()} 
@@ -41,7 +41,7 @@ const ProjectsCard = ({title,content,links,img}) => {
         initial="hidden"
         whileInView="visible"
         custom={1}
-        viewport={{ once: false, amount: 0.1 }}
+        viewport={{ once: true, amount: 0.1 }}
         variants={delayEntryVariants}
         className="font-bold text-xl mb-2 text-center">
           {title}
@@ -50,7 +50,7 @@ const ProjectsCard = ({title,content,links,img}) => {
         initial="hidden"
         whileInView="visible"
         custom={1}
-        viewport={{ once: false, amount: 0.1 }}
+        viewport={{ once: true, amount: 0.1 }}
         variants={delayEntryVariants}
         className="text-gray-500 text-base">
           {content}

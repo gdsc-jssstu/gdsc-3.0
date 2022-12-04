@@ -16,6 +16,19 @@ const delayEntryVariants = {
     }),
 };
 
+function format(inputDate) {
+  var date = new Date(inputDate);
+  if (!isNaN(date.getTime())) {
+      var day = date.getDate().toString();
+      var month = (date.getMonth() + 1).toString();
+      // Months use 0 index.
+
+      return  (day[1] ? day : '0' + day[0])+ '/' +
+         (month[1] ? month : '0' + month[0]) + '/' + 
+         date.getFullYear();
+  }
+}
+
 const EventsCard = ({title, date, content, images}) => {
   return (
         <>
@@ -36,7 +49,7 @@ const EventsCard = ({title, date, content, images}) => {
                     </m.h6>
                     </h5>
                     <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                                {date}
+                                {format(date)}
                         
                     </p>
                     <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">

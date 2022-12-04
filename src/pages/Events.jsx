@@ -5,6 +5,8 @@ import AOS from 'aos';
 import "aos/dist/aos.css";
 import client from "../../lib/client";
 
+
+
 const delayEntryVariants = {
     hidden: {
       y: "100%",
@@ -65,6 +67,10 @@ const Events = ({scrollContainer}) => {
         ).then((data) => setEvents(data)).catch((err) => console.log(err));
     },[]);
 
+    const sortedArr = events.sort(
+        (a,b) => (Number(new Date(a.date)) - Number(new Date(b.date)) > 0 ? -1 : 1)
+    )
+
 
   return (
         <main
@@ -111,7 +117,7 @@ const Events = ({scrollContainer}) => {
                         data-aos = "zoom-in"
                     />
                 ))} */}
-                {events.map((event) => (
+                {sortedArr.map((event) => (
                     <EventsCard
                         className="animation"
                         title = {event.title}

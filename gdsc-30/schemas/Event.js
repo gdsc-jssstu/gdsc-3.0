@@ -36,5 +36,14 @@ export default {
         ],
         title: 'Images',
       }
-    ]
+    ],
+    // orderings: [
+    //   {
+    //     title: 'Date, New',
+    //     name: 'dateDesc',
+    //     by: [
+    //       {field: 'date', direction: 'asc'}
+    //     ]
+    //   }
+    // ]
   }
