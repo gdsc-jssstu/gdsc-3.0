@@ -10,6 +10,9 @@ import Img_saturn from "../assets/home_page/saturn.svg";
 import Img_cloud from "../assets/home_page/cloud.svg";
 import Img_sun from "../assets/home_page/sun.svg";
 import Img_rocket_text from "../assets/home_page/rocket-ship-remove2.png";
+import ThemeContext from "../contexts/ThemeContext";
+import Card from "../components/HomeCard";
+import { Link } from "react-router-dom";
 
 // Logos
 import logo_light from "../assets/common/DSC JSS Science and Technology University Light Logo.png";
