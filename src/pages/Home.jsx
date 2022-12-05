@@ -1,10 +1,10 @@
 import { useRef, useContext } from "react";
 import Card from "../components/HomeCard";
 import ThemeContext from "../contexts/ThemeContext";
-import { motion as m } from "framer-motion";
+import { motion as m, AnimatePresence } from "framer-motion";
 
 // Side images
-// for animating svg, change this to svgr, replace img tag with respective svgr component
+// for animating svg, change this to svgr, replace img tag with respective svgr component if needed
 import { ReactComponent as Img_rocket } from "../assets/home_page/rocket with stars.svg";
 import Img_satellite from "../assets/home_page/satellite.svg";
 import Img_downarrow_light from "../assets/home_page/downarrow_light.svg";
@@ -13,6 +13,8 @@ import Img_saturn from "../assets/home_page/saturn.svg";
 import Img_cloud from "../assets/home_page/cloud.svg";
 import Img_sun from "../assets/home_page/sun.svg";
 import Img_rocket_test from "../assets/home_page/rocket-ship-remove2.png";
+import Img_star from "../assets/home_page/star.svg";
+import Img_moon from "../assets/common/moon.svg";
 
 // Logos
 import logo_light from "../assets/common/DSC JSS Science and Technology University Light Logo.png";
@@ -26,10 +28,12 @@ import {
   RiMediumFill,
   RiYoutubeFill,
   RiTwitterFill,
+  RiSunFill,
+  RiMoonFill,
 } from "react-icons/ri";
 
 const Home = ({ scrollContainer }) => {
-  const { isDark } = useContext(ThemeContext);
+  const { isDark, changeTheme } = useContext(ThemeContext);
 
   const ourFocusRef = useRef(null);
   const aboutJSSRef = useRef(null);
@@ -53,7 +57,7 @@ const Home = ({ scrollContainer }) => {
       {/* 3.5rem is the height of the navbar */}
       {/* First welcome section */}
       <div className="snap-start h-[calc(100vh_-_3.5rem)] ">
-        <div className=" relative px-4 flex justify-around items-center h-[calc(100%_-_5rem)] ">
+        <div className=" relative px-4 flex flex-col md:flex-row justify-around items-center h-[calc(100%_-_5rem)] ">
           <article className="dark:text-lightbg md:space-y-5 z-10">
             <section className="">
               <img
@@ -62,7 +66,7 @@ const Home = ({ scrollContainer }) => {
                 srcSet=""
                 className=" sm:max-w-md md:max-w-lg "
               />
-              <p className="mt-5 max-w-sm md:max-w-md tracking-wide text-justify text-lg">
+              <p className="mt-5  md:max-w-md tracking-wide text-justify text-lg">
                 At GDSC JSSSTU, our aim is to learn and teach. Developers,
                 designers and managers come together under one roof to create a
                 community which inspires thousands. Join Us!
@@ -74,24 +78,111 @@ const Home = ({ scrollContainer }) => {
               <span className=" text-green-500">Grow.</span>
             </section>
           </article>
-          <section className="hidden relative w-1/3 md:block h-full overflow-hidden">
+          <div
+            className=" absolute sm:hidden cursor-pointer  right-5 top-5 text-2xl dark:text-lightnav dark:hover:text-yellow-400 z-10"
+            onClick={() => {
+              console.log("clicked");
+              changeTheme();
+            }}
+          >
+            {isDark ? <RiSunFill /> : <RiMoonFill />}
+          </div>
+          <section className=" relative md:w-1/3 md:block h-2/3 md:h-4/5  flex justify-center items-center overflow-hidden ">
+            <AnimatePresence>
+              {isDark && (
+                <m.img
+                  key="moon"
+                  initial={{ x: 200, y: -100, scale: 0.2 }}
+                  animate={{ x: 0, y: 0, scale: 1 }}
+                  exit={{ x: -200, y: 200, opacity: 0 }}
+                  transition={{
+                    duration: 0.5,
+
+                    ease: "anticipate",
+                  }}
+                  className="absolute top-5 left-4 z-0 w-28"
+                  src={Img_moon}
+                  alt=""
+                  srcset=""
+                />
+              )}
+              {!isDark && (
+                <m.img
+                  key="sun"
+                  initial={{ x: 200, y: -100, scale: 0.2 }}
+                  animate={{ x: 0, y: 0, scale: 1 }}
+                  exit={{ x: -200, y: 200, opacity: 0 }}
+                  transition={{
+                    duration: 0.5,
+                    ease: "anticipate",
+                  }}
+                  className="absolute top-5 left-4 z-0 w-28"
+                  src={Img_sun}
+                  alt=""
+                  srcset=""
+                />
+              )}
+            </AnimatePresence>
             <m.img
-              initial={{ scale: 0.3 }}
-              whileInView={{ scale: 1 }}
-              transition={{ delay: 0.1 }}
-              className="absolute top-0 left-0 z-0"
+              transition={{
+                repeat: Infinity,
+                repeatType: "reverse",
+                duration: 15,
+              }}
+              animate={{ x: [null, 20, -100] }}
+              className="absolute top-0 right-10 z-0 w-40 sm:w-60"
               src={Img_cloud}
               alt=""
               srcset=""
             />
             <m.img
-              initial={{ y: 500 }}
+              transition={{
+                repeat: Infinity,
+                repeatType: "reverse",
+                duration: 15,
+              }}
+              animate={{ x: [null, -20, 100], scale: 1 }}
+              className="absolute bottom-0 left-0 z-0 w-40 sm:w-60"
+              src={Img_cloud}
+              alt=""
+              srcset=""
+            />
+
+            <m.img
+              initial={{ rotate: -90, scale: 0.5 }}
+              whileInView={{ opacity: 1, rotate: 0, scale: 1 }}
+              transition={{ delay: 0.2 }}
+              className="absolute top-40 left-5 z-0 w-10 sm:w-14"
+              src={Img_star}
+              alt=""
+              srcset=""
+            />
+            <m.img
+              initial={{ opacity: 0, rotate: -90, scale: 0.5 }}
+              whileInView={{ opacity: 1, rotate: 0, scale: 1 }}
+              transition={{ delay: 0.2 }}
+              className="absolute top-10 right-5 z-0 w-10 sm:w-14"
+              src={Img_star}
+              alt=""
+              srcset=""
+            />
+            <m.img
+              initial={{ opacity: 0, rotate: -90, scale: 0.5 }}
+              whileInView={{ opacity: 1, rotate: 0, scale: 1 }}
+              transition={{ delay: 0.2 }}
+              className="absolute bottom-10 right-20 z-0 w-10 sm:w-14"
+              src={Img_star}
+              alt=""
+              srcset=""
+            />
+            <m.img
+              initial={{ y: 300 }}
               whileInView={{ y: 20 }}
               transition={{ delay: 0.2 }}
               viewport={{ once: false }}
               src={Img_rocket_test}
               alt=""
-              className="object-contain "
+              className="  "
             />
           </section>
         </div>
@@ -100,7 +191,7 @@ const Home = ({ scrollContainer }) => {
           <img
             src={isDark ? Img_downarrow_dark : Img_downarrow_light}
             alt=""
-            className="object-contain h-11 w-full mx-auto cursor-pointer"
+            className="hidden md:block object-contain h-11 w-full mx-auto cursor-pointer"
           />
         </span>
       </div>

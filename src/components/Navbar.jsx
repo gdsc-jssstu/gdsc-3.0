@@ -1,24 +1,16 @@
 import { useContext } from "react";
 import logo_light from "../assets/common/DSC JSS Science and Technology University Light Logo.png";
 import logo_dark from "../assets/common/DSC JSS Science and Technology University Dark Logo.png";
-import logo_dark_small from "../assets/common/google-developers.svg";
 import ThemeContext from "../contexts/ThemeContext";
 import {
   RiMoonFill,
   RiSunFill,
-  RiMenuFill,
-  RiCloseLine,
-  RiHome2Fill,
   RiHome4Line,
   RiTeamLine,
   RiCalendarEventLine,
   RiLightbulbLine,
-  RiPencilLine,
   RiMailLine,
 } from "react-icons/ri";
-import Popup from "reactjs-popup";
-import { motion as m } from "framer-motion";
-
 
 const Navbar = ({ scrollYValue }) => {
   const { isDark, changeTheme } = useContext(ThemeContext);
@@ -48,14 +40,6 @@ const Navbar = ({ scrollYValue }) => {
           } object-contain `}
           // className="visible max-h-14 ml-7 object-contain h-full"
         />
-        {/* <img
-          src={logo_dark_small}
-          alt=""
-          className={`sm:hidden  h-8  ${
-            scrollYValue > 200 ? " visible " : "  invisible"
-          } object-contain `}
-          // className="visible max-h-14 ml-7 object-contain h-full"
-        /> */}
       </div>
       {/* ${scrollYValue > 300 ? " drop-shadow-0" : " drop-shadow-md"} */}
       <ul
@@ -76,12 +60,11 @@ const Navbar = ({ scrollYValue }) => {
         </li>
       </ul>
 
-      <ul className=" sm:hidden flex w-full h-full justify-around ">
+      <ul className="bg-lightnav dark:bg-darknav sm:hidden flex w-full h-full justify-around ">
         <SmallNavBarItems title="Home" Icon={RiHome4Line} />
         <SmallNavBarItems title="Team" Icon={RiTeamLine} />
         <SmallNavBarItems title="Events" Icon={RiCalendarEventLine} />
         <SmallNavBarItems title="Project" Icon={RiLightbulbLine} />
-        <SmallNavBarItems title="Blogs" Icon={RiPencilLine} />
         <SmallNavBarItems title="Contact Us" Icon={RiMailLine} />
       </ul>
     </nav>
