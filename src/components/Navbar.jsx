@@ -28,7 +28,7 @@ const Navbar = ({ scrollYValue }) => {
          
          bg-lightnav dark:bg-darknav hidden sm:flex text-sm gap-x-4 justify-end md:text-base md:gap-x-6 lg:gap-x-14 xl:gap-x-16 items-center dark:text-lightnav font-medium `}
        >
-        <li><Link to="/">Home</Link></li>
+        <li ><Link to="/">Home</Link></li>
         <li>Team</li>
         <li><Link to="/Events">Events</Link></li>
         <li><Link to="/Projects">Projects</Link></li>
