@@ -45,7 +45,7 @@ const LayoutWithNav = ({ scrollYValue }) => {
 
   return (
     <div className={`${isDark ? "dark" : " "}`}>
-      <header className="absolute sm:relative bottom-0 z-10">
+      <header className="absolute sm:relative bottom-0 sm:top-0  z-10">
         <Navbar scrollYValue={scrollYValue} />
       </header>
       <Outlet />

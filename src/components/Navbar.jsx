@@ -5,11 +5,11 @@ import ThemeContext from "../contexts/ThemeContext";
 import {
   RiMoonFill,
   RiSunFill,
-  RiHome4Line,
-  RiTeamLine,
-  RiCalendarEventLine,
-  RiLightbulbLine,
-  RiMailLine,
+  RiHome5Fill,
+  RiTeamFill,
+  RiCalendarEventFill,
+  RiLightbulbFill,
+  RiMailFill,
 } from "react-icons/ri";
 
 const Navbar = ({ scrollYValue }) => {
@@ -18,19 +18,12 @@ const Navbar = ({ scrollYValue }) => {
   return (
     // dont change the height of the navbar see if you are changeing, make sure to update the calc function (inside className) in HomeCard component
     <nav
-      // className={`flex justify-around items-center md:justify-between h-14 bg-lightnav dark:bg-darknav  drop-shadow-md `}
       className={` flex justify-between px-0 items-center w-screen  md:justify-between h-14 ${
         scrollYValue > 300
           ? " bg-lightnav dark:bg-darknav drop-shadow-md"
           : "bg-lightbg dark:bg-darkbg drop-shadow-0"
       }     `}
     >
-      {/* ${
-        scrollYValue > 300
-          ? " bg-lightnav dark:bg-darknav drop-shadow-md"
-          : "bg-lightbg  dark:bg-darkbg"
-      } */}
-
       <div className="hidden sm:block">
         <img
           src={isDark ? logo_dark : logo_light}
@@ -38,13 +31,11 @@ const Navbar = ({ scrollYValue }) => {
           className={` sm:block h-14  ${
             scrollYValue > 200 ? " visible ml-7 " : "  invisible ml-0"
           } object-contain `}
-          // className="visible max-h-14 ml-7 object-contain h-full"
         />
       </div>
-      {/* ${scrollYValue > 300 ? " drop-shadow-0" : " drop-shadow-md"} */}
+
       <ul
         className={`px-4 hidden sm:flex text-sm gap-x-4 justify-end md:text-base md:gap-x-6 lg:gap-x-14 xl:gap-x-16 items-center dark:text-lightnav font-medium `}
-        // className={`px-4 bg-lightnav dark:bg-darknav hidden sm:flex text-sm gap-x-4 justify-end md:text-base md:gap-x-6 lg:gap-x-14 xl:gap-x-16 items-center dark:text-lightnav font-medium `}
       >
         <li>Home</li>
         <li>Team</li>
@@ -60,12 +51,12 @@ const Navbar = ({ scrollYValue }) => {
         </li>
       </ul>
 
-      <ul className="bg-lightnav dark:bg-darknav sm:hidden flex w-full h-full justify-around ">
-        <SmallNavBarItems title="Home" Icon={RiHome4Line} />
-        <SmallNavBarItems title="Team" Icon={RiTeamLine} />
-        <SmallNavBarItems title="Events" Icon={RiCalendarEventLine} />
-        <SmallNavBarItems title="Project" Icon={RiLightbulbLine} />
-        <SmallNavBarItems title="Contact Us" Icon={RiMailLine} />
+      <ul className="bg-lightnav dark:bg-darknav sm:hidden flex w-full h-14 justify-around ">
+        <SmallNavBarItems title="Home" Icon={RiHome5Fill} />
+        <SmallNavBarItems title="Team" Icon={RiTeamFill} />
+        <SmallNavBarItems title="Events" Icon={RiCalendarEventFill} />
+        <SmallNavBarItems title="Project" Icon={RiLightbulbFill} />
+        <SmallNavBarItems title="Contact Us" Icon={RiMailFill} />
       </ul>
     </nav>
   );
