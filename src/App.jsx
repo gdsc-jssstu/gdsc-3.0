@@ -47,7 +47,7 @@ const LayoutWithNav = ({ scrollYValue }) => {
 
   return (
     <div
-      className={`flex flex-col-reverse  sm:flex-col w-screen set-container-height ${
+      className={`flex flex-col-reverse  sm:flex-col w-full set-container-height md:h-full ${
         isDark ? "dark" : " "
       }`}
     >

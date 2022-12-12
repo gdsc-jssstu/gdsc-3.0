@@ -20,7 +20,7 @@ const Navbar = ({ scrollYValue }) => {
       {/*  // dont change the height of the navbar see if you are changeing, make
       sure to update the calc function (inside className) in HomeCard component */}
       <nav
-        className={`hidden sm:flex justify-between px-0 items-center w-screen md:justify-between h-14 ${
+        className={`hidden sm:flex justify-between px-0 items-center w-full md:justify-between h-14 ${
           scrollYValue > 300
             ? " bg-lightnav dark:bg-darknav drop-shadow-md"
             : "bg-lightbg dark:bg-darkbg drop-shadow-0"
@@ -70,7 +70,7 @@ const Navbar = ({ scrollYValue }) => {
 
 const SmallNavBarItems = ({ Icon, title }) => {
   return (
-    <li className="flex flex-col justify-end items-center w-screen  dark:text-lightbg">
+    <li className="flex flex-col justify-end items-center w-full dark:text-lightbg">
       <div className="text-2xl hover:scale-110 ">
         <Icon />
       </div>
