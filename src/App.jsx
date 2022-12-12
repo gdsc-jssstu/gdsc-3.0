@@ -5,6 +5,7 @@ import { useScroll } from "framer-motion";
 import { BrowserRouter, Routes, Outlet, Route } from "react-router-dom";
 import ThemeContext, { ThemeProvider } from "./contexts/ThemeContext";
 import "./index.css";
+
 function App() {
   // Make this a context??
   const scrollContainer = useRef(null);

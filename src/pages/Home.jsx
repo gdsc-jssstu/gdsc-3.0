@@ -267,7 +267,7 @@ const Home = ({ scrollContainer }) => {
             variants={floatImgVariants}
             animate="satallite"
             src={Img_satellite}
-            className="absolute top-0 left-0 w-48 md:w-60"
+            className="absolute top-0 left-0 w-48 md:w-60 md:left-1/4"
             alt=""
           />
         )}
@@ -315,7 +315,7 @@ const Home = ({ scrollContainer }) => {
             variants={floatImgVariants}
             animate="satallite"
             src={Img_satellite}
-            className="absolute top-0 left-0 w-48 md:w-60"
+            className="absolute top-0 left-0 w-48 md:w-60 md:left-1/4"
             alt=""
           />
         )}
@@ -431,7 +431,7 @@ const Home = ({ scrollContainer }) => {
             variants={floatImgVariants}
             animate="satallite"
             src={Img_satellite}
-            className="absolute top-0 left-0 w-48 md:w-60"
+            className="absolute top-0 left-0 w-48 md:w-60 md:left-1/4"
             alt=""
           />
         )}
