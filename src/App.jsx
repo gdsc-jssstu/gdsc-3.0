@@ -4,7 +4,7 @@ import { useEffect, useState, useRef, useContext } from "react";
 import { useScroll } from "framer-motion";
 import { BrowserRouter, Routes, Outlet, Route } from "react-router-dom";
 import ThemeContext, { ThemeProvider } from "./contexts/ThemeContext";
-
+import "./index.css";
 function App() {
   // Make this a context??
   const scrollContainer = useRef(null);
@@ -32,6 +32,7 @@ function App() {
               path="/"
               element={<Home scrollContainer={scrollContainer} />}
             />
+            <Route path="/testing" element={<div className="">Hello</div>} />
             {/* add pages here */}
           </Route>
         </Routes>
@@ -44,10 +45,13 @@ const LayoutWithNav = ({ scrollYValue }) => {
   const { isDark } = useContext(ThemeContext);
 
   return (
-    <div className={`${isDark ? "dark" : " "}`}>
-      <header className="absolute sm:relative bottom-0 sm:top-0  z-10">
-        <Navbar scrollYValue={scrollYValue} />
-      </header>
+    <div
+      className={`flex flex-col-reverse  sm:flex-col w-screen set-container-height ${
+        isDark ? "dark" : " "
+      }`}
+    >
+      <Navbar scrollYValue={scrollYValue} />
+
       <Outlet />
     </div>
   );

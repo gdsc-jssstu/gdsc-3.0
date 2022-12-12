@@ -7,6 +7,7 @@ import { motion as m, AnimatePresence } from "framer-motion";
 // for animating svg, change this to svgr, replace img tag with respective svgr component if needed
 import { ReactComponent as Img_rocket } from "../assets/home_page/rocket with stars.svg";
 import Img_satellite from "../assets/home_page/satellite.svg";
+// import Img_satellite from "../assets/home_page/satellite-svgrepo.svg";
 import Img_downarrow_light from "../assets/home_page/downarrow_light.svg";
 import Img_downarrow_dark from "../assets/home_page/downarrow_dark.svg";
 import Img_saturn from "../assets/home_page/saturn.svg";
@@ -45,7 +46,7 @@ const floatImgVariants = {
   },
   satallite: {
     x: [null, 50, -10],
-    y: [null, -10, 10],
+    y: [null, -5, 10],
     rotate: [null, 30, 40],
     transition: {
       repeat: Infinity,
@@ -94,12 +95,12 @@ const Home = ({ scrollContainer }) => {
   return (
     <main
       ref={scrollContainer}
-      className="scroll-smooth snap-y snap-mandatory  overflow-y-scroll h-[calc(100vh_-_3.5rem)]  bg-lightbg dark:bg-darkbg font-sans"
+      className="scroll-smooth snap-y snap-mandatory  overflow-y-scroll  h-[calc(100vh_-_3.5rem)]  bg-lightbg dark:bg-darkbg font-sans"
     >
       {/* 3.5rem is the height of the navbar */}
       {/* First welcome section */}
-      <div className="snap-start h-[calc(100vh-3.5rem)] ">
-        <div className=" relative px-4 flex flex-col md:flex-row justify-around items-center  h-[calc(100%_-_3.5rem)] md:h-[calc(100%_-_5rem)] lg:h-[calc(100%_-_3.5rem)] ">
+      <div className="snap-start h-[calc(100vh-7rem)] sm:h-[calc(100vh-3.5rem)] ">
+        <div className=" relative px-4 flex flex-col md:flex-row justify-around items-center  h-[calc(100%_-_3.5rem)]  ">
           <article className="dark:text-lightbg md:space-y-5 z-10">
             <section className="">
               <img
@@ -129,7 +130,7 @@ const Home = ({ scrollContainer }) => {
           >
             {isDark ? <RiSunFill /> : <RiMoonFill />}
           </div>
-          <div className="absolute w-full h-full md:relative  md:w-5/12 md:block md:h-4/5">
+          <div className="absolute w-full h-[calc(100vh-3.5rem)] sm:h-[calc(100vh-3.5rem)]  md:relative  md:w-5/12 md:block md:h-4/5">
             <section className="h-full relative flex justify-center items-center overflow-hidden ">
               <AnimatePresence>
                 {isDark && (
@@ -218,15 +219,25 @@ const Home = ({ scrollContainer }) => {
                 alt=""
                 srcset=""
               />
-              <m.img
-                className="absolute bottom-10 right-14 md:right-auto md:bottom-auto  w-40 md:w-60"
-                initial={{ y: 200, x: 100, rotate: -30 }}
-                whileInView={{ y: 0, x: 0 }}
-                transition={{ delay: 0.1 }}
-                viewport={{ once: false }}
-                src={Img_rocket_test}
-                alt=""
-              />
+              <m.div
+                animate={{ x: [0, -40], y: [0, -60], rotate: [10, -10] }}
+                transition={{
+                  repeat: Infinity,
+                  repeatType: "mirror",
+                  duration: 10,
+                }}
+                className="absolute bottom-10 right-14 md:bottom-auto md:right-auto"
+              >
+                <m.img
+                  className="  w-40 md:w-60"
+                  initial={{ y: 200, x: 100, rotate: -30 }}
+                  whileInView={{ y: 0, x: 0 }}
+                  transition={{ delay: 0.1 }}
+                  viewport={{ once: false }}
+                  src={Img_rocket_test}
+                  alt=""
+                />
+              </m.div>
             </section>
           </div>
         </div>
@@ -256,7 +267,7 @@ const Home = ({ scrollContainer }) => {
             variants={floatImgVariants}
             animate="satallite"
             src={Img_satellite}
-            className="absolute top-0 left-0 w-48 md:w-auto"
+            className="absolute top-0 left-0 w-48 md:w-60"
             alt=""
           />
         )}
@@ -304,7 +315,7 @@ const Home = ({ scrollContainer }) => {
             variants={floatImgVariants}
             animate="satallite"
             src={Img_satellite}
-            className="absolute top-0 left-0 w-48 md:w-auto"
+            className="absolute top-0 left-0 w-48 md:w-60"
             alt=""
           />
         )}
@@ -420,7 +431,7 @@ const Home = ({ scrollContainer }) => {
             variants={floatImgVariants}
             animate="satallite"
             src={Img_satellite}
-            className="absolute top-0 left-0 w-48 md:w-auto"
+            className="absolute top-0 left-0 w-48 md:w-60"
             alt=""
           />
         )}
