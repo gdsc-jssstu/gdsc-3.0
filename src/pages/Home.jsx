@@ -3,19 +3,21 @@ import Card from "../components/HomeCard";
 import ThemeContext from "../contexts/ThemeContext";
 import { motion as m, AnimatePresence } from "framer-motion";
 
-// Side images
-// for animating svg, change this to svgr, replace img tag with respective svgr component if needed
-import { ReactComponent as Img_rocket } from "../assets/home_page/rocket with stars.svg";
 import Img_satellite from "../assets/home_page/satellite.svg";
-// import Img_satellite from "../assets/home_page/satellite-svgrepo.svg";
+// import Img_satellite from "../assets/home_page/satellite-svgrepo 1.svg";
+
 import Img_downarrow_light from "../assets/home_page/downarrow_light.svg";
 import Img_downarrow_dark from "../assets/home_page/downarrow_dark.svg";
 import Img_saturn from "../assets/home_page/saturn.svg";
 import Img_cloud from "../assets/home_page/cloud.svg";
+// import Img_cloud from "../assets/home_page/cloud-svgrepo.svg";
+
 import Img_sun from "../assets/home_page/sun.svg";
 import Img_rocket_test from "../assets/home_page/rocket-ship-remove2.png";
+// import Img_rocket_test from "../assets/home_page/rocket-svgrepo 1.svg";
 import Img_star from "../assets/home_page/star.svg";
-import Img_moon from "../assets/common/moon.svg";
+// import Img_moon from "../assets/common/moon.svg";
+import Img_moon from "../assets/home_page/moon.svg";
 
 // Logos
 import logo_light from "../assets/common/DSC JSS Science and Technology University Light Logo.png";
@@ -99,7 +101,7 @@ const Home = ({ scrollContainer }) => {
     >
       {/* 3.5rem is the height of the navbar */}
       {/* First welcome section */}
-      <div className="snap-start h-[calc(100vh-7rem)] sm:h-[calc(100vh-3.5rem)] ">
+      <div className="snap-start h-[calc(100vh-3.5rem)] sm:h-[calc(100vh-3.5rem)] ">
         <div className=" relative px-4 flex flex-col md:flex-row justify-around items-center  h-[calc(100%_-_3.5rem)]  ">
           <article className="dark:text-lightbg md:space-y-5 z-10">
             <section className="">
@@ -130,7 +132,7 @@ const Home = ({ scrollContainer }) => {
           >
             {isDark ? <RiSunFill /> : <RiMoonFill />}
           </div>
-          <div className="absolute w-full h-[calc(100vh-3.5rem)] sm:h-[calc(100vh-3.5rem)]  md:relative  md:w-5/12 md:block md:h-4/5">
+          <div className="absolute w-full h-[calc(100vh-7rem)] sm:h-[calc(100vh-3.5rem)]  md:relative  md:w-5/12 md:block md:h-4/5">
             <section className="h-full relative flex justify-center items-center overflow-hidden ">
               <AnimatePresence>
                 {isDark && (
@@ -174,7 +176,7 @@ const Home = ({ scrollContainer }) => {
                   duration: 15,
                 }}
                 animate={{ x: [null, 20, -100] }}
-                className="absolute top-16 md:top-0 right-10 z-0 w-40 sm:w-52"
+                className="absolute hidden sm:block top-16 md:top-0 right-10 z-0 w-40 sm:w-58"
                 src={Img_cloud}
                 alt=""
                 srcset=""
@@ -186,7 +188,7 @@ const Home = ({ scrollContainer }) => {
                   duration: 15,
                 }}
                 animate={{ x: [null, -20, 100], scale: 1 }}
-                className="absolute bottom-0 left-10 md:left-0 z-0 w-40 sm:w-52"
+                className="absolute hidden sm:block bottom-0 left-10 md:left-0 z-0 w-40 sm:w-52"
                 src={Img_cloud}
                 alt=""
                 srcset=""
@@ -220,7 +222,7 @@ const Home = ({ scrollContainer }) => {
                 srcset=""
               />
               <m.div
-                animate={{ x: [0, -40], y: [0, -60], rotate: [10, -10] }}
+                animate={{ x: [0, 40], y: [0, 60], rotate: [10, -10] }}
                 transition={{
                   repeat: Infinity,
                   repeatType: "mirror",
@@ -246,7 +248,7 @@ const Home = ({ scrollContainer }) => {
           <img
             src={isDark ? Img_downarrow_dark : Img_downarrow_light}
             alt=""
-            className="hidden md:block object-contain h-11 w-full mx-auto cursor-pointer"
+            className="hidden sm:block object-contain h-11 w-full mx-auto cursor-pointer"
           />
         </span>
       </div>
@@ -267,7 +269,7 @@ const Home = ({ scrollContainer }) => {
             variants={floatImgVariants}
             animate="satallite"
             src={Img_satellite}
-            className="absolute top-0 left-0 w-48 md:w-60 md:left-1/4"
+            className="absolute top-5 left-5 w-32 md:top-0 md:w-40 md:left-1/4 "
             alt=""
           />
         )}
@@ -315,7 +317,7 @@ const Home = ({ scrollContainer }) => {
             variants={floatImgVariants}
             animate="satallite"
             src={Img_satellite}
-            className="absolute top-0 left-0 w-48 md:w-60 md:left-1/4"
+            className="absolute top-5 left-5 w-32 md:top-0 md:w-40 md:left-1/4 "
             alt=""
           />
         )}
@@ -339,7 +341,7 @@ const Home = ({ scrollContainer }) => {
             variants={floatImgVariants}
             animate="cloud"
             src={Img_cloud}
-            className="absolute bottom-10 right-10  w-48 md:w-auto"
+            className="absolute bottom-10 right-10  w-48 md:w-48"
             alt=""
           />
         )}
@@ -431,7 +433,7 @@ const Home = ({ scrollContainer }) => {
             variants={floatImgVariants}
             animate="satallite"
             src={Img_satellite}
-            className="absolute top-0 left-0 w-48 md:w-60 md:left-1/4"
+            className="absolute top-5 left-5 w-32 md:top-0 md:w-40 md:left-1/4 "
             alt=""
           />
         )}
