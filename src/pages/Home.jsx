@@ -1,22 +1,17 @@
-import { useRef, useContext } from "react";
 import Card from "../components/HomeCard";
+import { useRef, useContext, useEffect } from "react";
 import ThemeContext from "../contexts/ThemeContext";
 import { motion as m, AnimatePresence } from "framer-motion";
 
+// Images
 import Img_satellite from "../assets/home_page/satellite.svg";
-// import Img_satellite from "../assets/home_page/satellite-svgrepo 1.svg";
-
 import Img_downarrow_light from "../assets/home_page/downarrow_light.svg";
 import Img_downarrow_dark from "../assets/home_page/downarrow_dark.svg";
 import Img_saturn from "../assets/home_page/saturn.svg";
 import Img_cloud from "../assets/home_page/cloud.svg";
-// import Img_cloud from "../assets/home_page/cloud-svgrepo.svg";
-
 import Img_sun from "../assets/home_page/sun.svg";
 import Img_rocket_test from "../assets/home_page/rocket-ship-remove2.png";
-// import Img_rocket_test from "../assets/home_page/rocket-svgrepo 1.svg";
 import Img_star from "../assets/home_page/star.svg";
-// import Img_moon from "../assets/common/moon.svg";
 import Img_moon from "../assets/home_page/moon.svg";
 
 // Logos
@@ -101,7 +96,7 @@ const Home = ({ scrollContainer }) => {
     >
       {/* 3.5rem is the height of the navbar */}
       {/* First welcome section */}
-      <div className="snap-start h-[calc(100vh-3.5rem)] sm:h-[calc(100vh-3.5rem)] ">
+      <div className="snap-start h-[calc(100vh-3.5rem)]">
         <div className=" relative px-4 flex flex-col md:flex-row justify-around items-center  h-[calc(100%_-_3.5rem)]  ">
           <article className="dark:text-lightbg md:space-y-5 z-10">
             <section className="">
@@ -124,7 +119,7 @@ const Home = ({ scrollContainer }) => {
             </section>
           </article>
           <div
-            className=" absolute sm:hidden cursor-pointer  right-5 top-5 text-2xl dark:text-lightnav dark:hover:text-yellow-400 z-10"
+            className=" absolute sm:hidden cursor-pointer right-5 top-5 text-2xl dark:text-lightnav dark:hover:text-yellow-400 z-10"
             onClick={() => {
               console.log("clicked");
               changeTheme();
@@ -269,7 +264,7 @@ const Home = ({ scrollContainer }) => {
             variants={floatImgVariants}
             animate="satallite"
             src={Img_satellite}
-            className="absolute top-5 left-5 w-32 md:top-0 md:w-40 md:left-1/4 "
+            className="absolute top-0 left-0 w-48 md:w-60 md:left-1/4"
             alt=""
           />
         )}
@@ -317,7 +312,7 @@ const Home = ({ scrollContainer }) => {
             variants={floatImgVariants}
             animate="satallite"
             src={Img_satellite}
-            className="absolute top-5 left-5 w-32 md:top-0 md:w-40 md:left-1/4 "
+            className="absolute top-0 left-0 w-48 md:w-60 md:left-1/4"
             alt=""
           />
         )}
@@ -394,9 +389,6 @@ const Home = ({ scrollContainer }) => {
           />
         )}
       >
-        {/* <button className=" bg-blue-500 rounded-lg px-6 py-2 text-lg text-lightbg">
-          placeholder for icons
-        </button> */}
         <ul className="flex gap-x-4 text-4xl sm:text-5xl">
           <li className="  hover:scale-110 text-pink-600">
             <RiInstagramLine />
@@ -433,7 +425,7 @@ const Home = ({ scrollContainer }) => {
             variants={floatImgVariants}
             animate="satallite"
             src={Img_satellite}
-            className="absolute top-5 left-5 w-32 md:top-0 md:w-40 md:left-1/4 "
+            className="absolute top-0 left-0 w-48 md:w-60 md:left-1/4"
             alt=""
           />
         )}

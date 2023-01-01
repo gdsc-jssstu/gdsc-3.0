@@ -42,7 +42,7 @@ const Card = ({
       ref={currentRef}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.1 }}
+      viewport={{ once: true }}
       variants={cardVariants}
       className="relative snap-start h-[calc(100vh_-_3.5rem)] overflow-hidden"
     >
@@ -53,7 +53,7 @@ const Card = ({
           initial="hidden"
           whileInView="visible"
           custom={0.5}
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: true }}
           variants={delayEntryVariants}
           className=" text-4xl md:text-5xl font-bold"
         >
@@ -63,7 +63,7 @@ const Card = ({
           initial="hidden"
           whileInView="visible"
           custom={1}
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: true }}
           variants={delayEntryVariants}
           className="px-4 lg:px-0 max-w-lg text-center text-lg md:text-xl  tracking-wide"
         >
@@ -73,7 +73,7 @@ const Card = ({
           initial="hidden"
           whileInView="visible"
           custom={1.5}
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: true }}
           variants={delayEntryVariants}
         >
           {children}
