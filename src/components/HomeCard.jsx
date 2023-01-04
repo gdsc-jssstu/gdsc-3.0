@@ -42,20 +42,18 @@ const Card = ({
       ref={currentRef}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.1 }}
+      viewport={{ once: true }}
       variants={cardVariants}
-      className="relative snap-start h-[calc(100vh_-_3.5rem)]"
+      className="relative snap-start h-[calc(100vh_-_3.5rem)] overflow-hidden"
     >
-      <span className="">
-        <FloatImg />
-      </span>
+      <FloatImg />
 
       <article className="h-[calc(100vh_-_7rem)] dark:text-lightbg flex flex-col justify-center items-center gap-y-10">
         <m.h3
           initial="hidden"
           whileInView="visible"
           custom={0.5}
-          viewport={{ once: false, amount: 0.1 }}
+          viewport={{ once: true }}
           variants={delayEntryVariants}
           className=" text-4xl md:text-5xl font-bold"
         >
@@ -65,7 +63,7 @@ const Card = ({
           initial="hidden"
           whileInView="visible"
           custom={1}
-          viewport={{ once: false, amount: 0.1 }}
+          viewport={{ once: true }}
           variants={delayEntryVariants}
           className="px-4 lg:px-0 max-w-lg text-center text-lg md:text-xl  tracking-wide"
         >
@@ -75,18 +73,14 @@ const Card = ({
           initial="hidden"
           whileInView="visible"
           custom={1.5}
-          viewport={{ once: false, amount: 0.1 }}
+          viewport={{ once: true }}
           variants={delayEntryVariants}
         >
           {children}
         </m.span>
       </article>
       {!isEnd && (
-        <span className="absolute bottom-11 w-full  ">
-          {/* <Img_downarrow
-            onClick={() => handleRef(nextRef)}
-            className="object-contain h-11  mx-auto cursor-pointer"
-          /> */}
+        <span className="w-full invisible  sm:visible">
           <img
             onClick={() => handleRef(nextRef)}
             src={isDark ? Img_downarrow_dark : Img_downarrow_light}
