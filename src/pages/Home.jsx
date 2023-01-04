@@ -2,7 +2,7 @@ import Card from "../components/HomeCard";
 import { useRef, useContext, useEffect } from "react";
 import ThemeContext from "../contexts/ThemeContext";
 import { motion as m, AnimatePresence } from "framer-motion";
-
+import { Link } from "react-router-dom";
 
 // Images
 import Img_satellite from "../assets/home_page/satellite.svg";
@@ -14,7 +14,6 @@ import Img_sun from "../assets/home_page/sun.svg";
 import Img_rocket_test from "../assets/home_page/rocket-ship-remove2.png";
 import Img_star from "../assets/home_page/star.svg";
 import Img_moon from "../assets/home_page/moon.svg";
-
 
 // Logos
 import logo_light from "../assets/common/DSC JSS Science and Technology University Light Logo.png";
@@ -344,7 +343,7 @@ const Home = ({ scrollContainer }) => {
         )}
       >
         <button className=" bg-blue-500 rounded-lg px-6 py-2 text-lg text-lightbg">
-        <Link to="/Projects">Projects</Link>
+          <Link to="/Projects">Projects</Link>
         </button>
       </Card>
 
