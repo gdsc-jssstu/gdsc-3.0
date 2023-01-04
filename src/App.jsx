@@ -1,5 +1,7 @@
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import Events from "./pages/Events";
 import { useEffect, useState, useRef, useContext } from "react";
 import { useScroll } from "framer-motion";
 import { BrowserRouter, Routes, Outlet, Route } from "react-router-dom";
@@ -35,6 +37,14 @@ function App() {
             />
             <Route path="/testing" element={<div className="">Hello</div>} />
             {/* add pages here */}
+            <Route
+              path="/Projects"
+              element={<Projects scrollContainer={scrollContainer} />}
+            />
+            <Route
+              path="/Events"
+              element={<Events scrollContainer={scrollContainer} />}
+            />
           </Route>
         </Routes>
       </BrowserRouter>

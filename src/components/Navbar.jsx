@@ -1,7 +1,9 @@
 import { useContext } from "react";
+import {Link} from "react-router-dom";
 import logo_light from "../assets/common/DSC JSS Science and Technology University Light Logo.png";
 import logo_dark from "../assets/common/DSC JSS Science and Technology University Dark Logo.png";
 import ThemeContext from "../contexts/ThemeContext";
+
 import {
   RiMoonFill,
   RiSunFill,
@@ -11,6 +13,7 @@ import {
   RiLightbulbFill,
   RiMailFill,
 } from "react-icons/ri";
+
 
 const Navbar = ({ scrollYValue }) => {
   const { isDark, changeTheme } = useContext(ThemeContext);

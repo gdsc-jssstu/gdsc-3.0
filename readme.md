@@ -16,6 +16,12 @@ To start the development server
 npm run dev
 ```
 
+To start sanity server
+
+```
+sanity start
+```
+
 # Important
 
 - Apply class "h-[calc(100vh_-_3.5rem)]" to the outermost container of the page 3.5rem is for the navbar
