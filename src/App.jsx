@@ -7,6 +7,7 @@ import { useScroll } from "framer-motion";
 import { BrowserRouter, Routes, Outlet, Route } from "react-router-dom";
 import ThemeContext, { ThemeProvider } from "./contexts/ThemeContext";
 import "./index.css";
+import Team from "./pages/Team";
 
 function App() {
   // Make this a context??
@@ -37,6 +38,10 @@ function App() {
             />
             <Route path="/testing" element={<div className="">Hello</div>} />
             {/* add pages here */}
+            <Route
+              path="/Team"
+              element={<Team scrollContainer={scrollContainer} />}
+            />
             <Route
               path="/Projects"
               element={<Projects scrollContainer={scrollContainer} />}

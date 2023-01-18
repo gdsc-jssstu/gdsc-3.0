@@ -49,16 +49,6 @@ const Card = ({
       <FloatImg />
 
       <article className="h-[calc(100vh_-_7rem)] dark:text-lightbg flex flex-col justify-center items-center gap-y-10">
-        <m.h3
-          initial="hidden"
-          whileInView="visible"
-          custom={0.5}
-          viewport={{ once: true }}
-          variants={delayEntryVariants}
-          className=" text-4xl md:text-5xl font-bold"
-        >
-          {title}
-        </m.h3>
         <m.p
           initial="hidden"
           whileInView="visible"
