@@ -75,7 +75,7 @@ const MemberCard = ({
 
       {!open && (
         <div className="absolute top-0 left-0 [transform-x:180deg]">
-          <div className="bg-darknav text-darknav dark:text-lightnav border border-gray-500 w-72 h-96 rounded-lg p-6 flex flex-col justify-around md:max-w-96 items-center gap-y-4">
+          <div className="bg-lightnav dark:bg-darknav text-darknav dark:text-lightnav border border-gray-500 w-72 h-96 rounded-lg p-6 flex flex-col justify-around md:max-w-96 items-center gap-y-4">
             <div>
               <p className="text-[0.9em] w-full">{desc}</p>
             </div>
