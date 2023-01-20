@@ -1,35 +1,48 @@
-const teamData2022 = {
+const teamData2021 = {
+  staffData: {
+    title: "GDSC MENTOR",
+    name: "Dr. M P Pushpalatha",
+    image: "/images/hod.jpg",
+    blurDataURL: "LRLUZ~Ri]VozL$xbV@Rj?uM{Oqof",
+    bio: "Currently (in 2021), head of the department of Computer Science and Engineering, with nearly three decades of teaching experience. Passionate and committed to inspire students to pursue academic and personal excellence. Driven by the motto, “Anything worth doing is worth doing well,” to create a challenging and engaging learning environment for students and self. My research focuses mainly on Machine Learning and Healthcare Informatics with a particular emphasis on the applications of healthcare technology to socially relevant issues. Currently guiding 6 PhD students with more than 50 research publications in reputed journals",
+    instagram: "",
+    linkedin: "",
+    github: "",
+    twitter: "",
+  },
 
   leadData: {
     title: "COMMUNITY LEAD",
     name: "Anagha Honnali",
-    image: "/images/team/2019/santosh.png",
-    blurDataURL: "LHELy#x[t-X9T#~UXARktmM{RQIV",
-    bio: "The most dynamic person in DSC -presenting to all, the community lead of DSC JSSSTU 2019-20, Santosh Umesh Shet. Being a pro at bringing the team together for fun as well as work, Santosh himself contributes to the design as well as the management team of DSC. He has experience working as mentor and lead in various organisations for several years. Santosh is one of the efficient developers when it comes to building machine learning projects and Google Cloud. Not to be mentioned, he is one of the most humble men in power who would make everyone in the team feel comfortable.",
-    instagram: "https://www.instagram.com/1he_trouble_maker/",
-    linkedin: "https://www.linkedin.com/in/sanshet",
-    github: "https://github.com/santos97",
+    image: "/images/team/2022/Anagha.jpg",
+    blurDataURL: "LsN]%q~V%LE2?aR*RjRQRQRQt7xt",
+    bio: `The powerhouse of the club, she knows exactly how to lead the way. One of the sweetest people out there, she's someone you can always count on. This caffeine addict manages to bring the best out of people, all with a smile on her face. And what's sweeter than her personality is her voice, you gotta listen to her sing!`
+    ,
+    instagram: "instagram.com/anagha.honnali/",
+    linkedin: "https://www.linkedin.com/in/anaghahonnali/",
+    github: "https://github.com/anagha-h",
+    twitter: "https://twitter.com/AnaghaHonnali",
   },
 
   execomData: [
-    "OPERATIONS LEADS",
+    "EXECOM",
     {
-      name: "V Shaashwath",
-      image: "/images/team/2019/Shashawath Vijayakumar.jpeg",
-      short: "Shashwath has quite a personality to himself...",
-      bio: "Shashwath has quite a personality to himself. For starters he's got long hair, quite sarcastic and has a fairly good sense of humor ! He's got enough patience and tolerance for the person reading this and him as well. Coding is what he's preferred to love and work with even though he's 3 years into ECE. He's a fun guy and would rather stab you in the front",
-      instagram: "#",
-      github: "#",
-      linkedin: "#",
+      name: "Srivatsa Joshi",
+      image: "/images/team/2022/Srivatsa.jpg",
+      short: "He's humble, he's calm and he's smart!",
+      bio: " A hard worker, he's that approachable and understanding senior who guides you with patience and a smile. He loves watching cricket and kabaddi, and has great interest in quantum computing and deep learning.",
+      linkedin: "https://www.linkedin.com/in/srivatsajoshi467",
+      github: "https://github.com/ss467",
     },
     {
-      name: "Vishruth",
-      image: "/images/team/2019/Vishruth.jpeg",
-      short: "This exceptional tall person is a self-proclaimed introvert.",
-      bio: "Though most people get to see a silent, observant and curious side of him, those that know him better would say he never shuts his mouth. Full of ideas and solutions for various problems, his jovial and humourous approach to such obstacles make him a fun person to be around. He welcomes any, and all cat videos.",
-      instagram: "#",
-      github: "#",
-      linkedin: "#",
+      name: "Darsha Sorokhaibam"      ,
+      image: "/images/team/2022/darsha.jpg",
+      short: "Two words: she SLAYS. ",
+      bio: "Be it mobilising the team for events, coming up with ideas or pushing folks to do their best, she slays 'em all. A straight-to-the-point person who stands up for what's right, she makes sure team members don't feel left out and involves them actively in tasks. An all-work, all-fun type of person, with a keen sense of fashion!",
+      instagram: "https://instagram.com/raddersha",
+      github: "",
+      linkedin: "https://www.linkedin.com/in/darsha-sorokhaibam-376877208",
+      twitter: "",
     },
   ],
 
@@ -38,146 +51,383 @@ const teamData2022 = {
       "TECHNICAL TEAM",
       [
         [
-          "MACHINE LEARNING LEADS",
+          "TECH ADVISOR",
           [
             {
-              name: "Rajat Shrivastava",
-              image: "/images/team/2019/Rajat Shrivastava.jpg",
-              short: "An avid reader and learner, Rajat is...",
-              bio: "An avid reader and learner, Rajat is a passionate coder. He loves finding solutions to challenging puzzles and can often be found quizzing his friends on tricky riddles. He's always working on new and interesting projects and constantly experimenting with different technologies. His most recent projects regard machine learning and deep learning.",
-              instagram: "#",
-              github: "#",
-              linkedin: "#",
+              name: "Alaap Surendran              ",
+              image: "/images/team/2022/Alaap.jpg",
+              short:
+                "Extremely enthusiastic and energetic, he is a man born for tech....",
+              bio: " If you have doubt on web development, you can go to him, doubts about cybersecurity, he will be there, doubt on app development, go for him and the list continues. He is an inspiration to many juniors and fellow mates. ",
+              instagram: "https://www.instagram.com/alaaps/",
+              github: "https://github.com/heyimalaap",
+              linkedin: "https://www.linkedin.com/in/alaap-surendran-68424a1b7",
             },
             {
-              name: "Shiva Shankar H.C",
-              image: "/images/team/2019/shiv shankar.jpg",
-              short: "He is a computer science enthusiast and...",
-              bio: "... he is passionate in developing web and android applications. He is currently working on Deep Neural Networks for facial expressions classifier and has experience in developing applications on Kubernetes and MEAN stack.",
-              instagram: "#",
-              github: "#",
-              linkedin: "#",
-            },
-          ],
-        ],
-        [
-          "WEB DEVELOPMENT LEADS",
-          [
-            {
-              name: "Nitin Bhat",
-              image: "/images/team/2019/nitin bhat.jpg",
-              short: "Shining among the crowd is this articulate...",
-              bio: "Shining among the crowd is this articulate, CSE 4th year student, Nitin Bhat. He's a Full-stack web developer, well versed with Data structures and algorithms. A huge tech enthusiast, he can be found hanging out with friends, coding, playing his guitar or cooking (he makes really tasty chicken). With his I know what I'm doing attitude, he ensures nobody has to worry about anything around him. A person who doesn't like to be idle and doesn't know how to be.",
-              instagram: "#",
-              github: "#",
-              linkedin: "#",
+              name: "Poorvi Shetty              ",
+              image: "/images/team/2022/poorvi.jpg",
+              short: "Jack of all and master of all! ",
+              bio: "This nocturnal hooman is incredibly sweet and always enthusiastic about tech. He is one of those rarity who praises the computer from its hardware to its software. He is not the one to lose out on sleep, compensates all his lost hours of sleep during the day. His eyes sparkle everytime someone mentions old technology. When in doubt, reach out to Alaap! He is the saviour when internals are around the corner. He’s got some impressive keyboard skills.",
+              instagram: "https://www.instagram.com/poorvi__shetty/",
+              github: "https://github.com/PoorviShetty",
+              linkedin: "https://www.linkedin.com/in/poorvi-shetty/",
             },
           ],
         ],
         [
-          "ANDROID LEADS",
+          "WOMEN IN TECH",
           [
             {
-              name: "Bebikananda Waikhom",
-              image: "/images/team/2019/Bbake Waikhom.jpg",
-              short: "A hardworking, tech enthusiast introvert with...",
-              bio: "A hardworking, tech enthusiast introvert with an intention to take up opportunities that are challenging to break the limits of what he can do. Coding is his happy pill. Developing a problem solution is his cup of tea. Other than that his love of music, meditation and a pet monkey on his shoulder is priceless.",
-              instagram: "#",
-              github: "#",
-              linkedin: "#",
+              name: "Medini              ",
+              image: "/images/team/2022/Medini.jpg",
+              short:
+                "Her calm demeanour will make you feel at ease around her...",
+              bio: " In addition to her sweet and calm vibes, she knows how to get things done, silently and efficiently. She's always up for club activities, and lending a hand to people and does not hesitate to express her views and opinions. ",
+              instagram: "https://instagram.com/medini_sangeetha?igshid=ZDdkNTZiNTM=",
+              twitter:"https://twitter.com/Medini0603?t=RB8Q2P6uZXQ_I0AcaJdKug&s=08",
+              github: "https://github.com/Medini0603",
+              linkedin: "https://www.linkedin.com/in/medini-udupa-546711212",
+            },
+            
+          ],
+        ],
+        [
+          "BLOCKCHAIN TECHNOLOGY",
+          [
+            {
+              name: "Abhilash M Hadli              ",
+              image: "/images/team/2022/AbhilashM.jpg",
+              short:
+                "Brave and never hesitant to express his opinion, he is a professional when, ...",
+              bio:" it comes to web and app development. He loves to play cricket and listening to music. His diligence and friendliness is admired by those around him. He also enjoys watching web series and reading.",
+              linkedin:"https://www.linkedin.com/in/abhilashmh",
+              instagram: "https://www.instagram.com/a7_abhilash",
+              github: "https://github.com/A7abhilash",
+            },
+            {
+              name: "Debojyoti Koley              ",
+              image: "/images/team/2022/Debojyoti.jpg",
+              short: "Talented and hardworking he's always... ",
+              bio: " down to learn new things! A web development enthusiast, his passion includes photography and playing the guitar.",
+    
+              github: "https://github.com/Debojyoti-Koley",
+              linkedin: "https://www.linkedin.com/in/debojyoti-koley-2268071a8/",
+            },
+          ],
+        ],
+        [
+          "WEB DEVELOPMENT",
+          [
+            {
+              name: "Manushreshta B L              ",
+              image: "/images/team/2022/Manushreshta.JPG",
+              short:
+                "Anyone who knows him, would know him for his brilliance, sense of humour and ...",
+              bio: "friendliness. A pro developer, he never shies away from hard work. He's always up for trying and building something new!",
+              instagram: "https://www.instagram.com/manushreshta27",
+              linkedin: "https://www.linkedin.com/in/manushreshta",
+              github: "https://www.github.com/m27afk",
+              twitter: "https://twitter.com/manushreshta27",
+            },
+            {
+              name: "Abhilash S Hathwar              ",
+              image: "/images/team/2022/abhilashsh.jpg",
+              short:
+                "Very talented and reliable, he is sure to get the job done. ",
+              bio: "But what's behind his very calm and composed demeanour is a meanie who will strike anytime, so beware! But when it counts, he's always there for you. A jack of all trades, there's nothing this guy cannot do, be it art of programming or of a canvas.              ",
+              instagram: "https://instagram.com/abhilash_437?igshid=ZDdkNTZiNTM=",
+              github: "https://github.com/Abhilash437",
+              linkedin: "https://www.linkedin.com/in/abhilashshathwar",
+              twitter: "https://twitter.com/abhilashindia7",
+            },
+            {
+              name: "Vikhyat G Gowda              ",
+              image: "/images/team/2022/vikyath.jpg",
+              short:
+                "Vikhyat is hardworking, intelligent and super friendly. He may be shy but..",
+              bio:` that only adds to the whole "paapa" factor, and we are ready to protect him at all costs. Along with being a web development pro, he loves reading and playing badminton!              `,
+              instagram: "https://instagram.com/divideby.zero._?igshid=ZDdkNTZiNTM=",
+              linkedin: "https://www.linkedin.com/in/vikhyat-gowda",
+              github: "https://github.com/vikhyat-gowda",
+              twitter: "https://twitter.com/dividebyZerooo?t=-EFmrSM0aqZGnw79wqcCKQ&s=09",
+            },
+          ],
+        ],
+        [
+          "CYBERSECURITY",
+          [
+            {
+              name: "Chandan S Gowda",
+              image: "/images/team/2022/chandan.jpg",
+              short: "An ambivert who loves fitness and eating healthy. He is..",
+              bio: " hard working and passionate about technology. Success makes him happy and he’s never afraid to step out of his comfort zone. He loves to play cricket and building startups. The only sad thing is he doesn't like marvel :)",
+               instagram: "https://www.instagram.com/i_am_csg/",
+              linkedin:
+                "https://www.linkedin.com/in/chandan-s-gowda-4b2913183/",
+              github: "https://github.com/chandansgowda",
+              twitter: "https://twitter.com/chandansgowdru",
+            },
+            {
+              name: "Shivam Menda              ",
+              image: "/images/team/2022/Shivam.jpg",
+              short: "True to his role, he's a Cybersecurity enthusiast and a tech geek! Loves...",
+              bio: " open source. Basketball is something he is good at. Dynamic and approachable, Shivam is a first-bencher with great ideas, takes initiative and is knowledgeable about all things tech.",
+              instagram: "https://www.instagram.com/shivam_menda/",
+              linkedin: "https://www.linkedin.com/in/shivam-menda/",
+              github: "https://github.com/ShivamMenda",
             },
 
+          ],
+        ],
+
+        [
+          "MACHINE LEARNING",
+          [
             {
-              name: "Pranav Bedre G H",
-              image: "/images/team/2019/Pranav Bedre.jpg",
-              short: "Tech enthusiast, budding app developer & an...",
-              bio: "Tech enthusiast, budding app developer & an aspiring full stack web developer. Previously worked on custom Android ROMs & kernels. Supporter of open source projects. Socially awkward specie, usually found with his friends or at his computer desk. Converts coke into code. His love for chicken is eternal.",
-              instagram: "#",
-              github: "#",
-              linkedin: "#",
+              name: "Kashyap S              ",
+              image: "/images/team/2022/kashyap.jpg",
+              short: "Diligent and diplomatic , Kashyap is an avid fan of..",
+              bio: " How   I Met Your Mother and quality music. His sense of humor and wit has earned him the title of being Chandler of GDSC. He plays football and piano in his spare time.",
+              instagram: "https://www.instagram.com/lionelkashyap/",
+              linkedin:                "https://www.linkedin.com/in/kashyaps25",
+            },
+            {
+              name: "Anusha K              ",
+              image: "/images/team/2022/Anusha.jpg",
+              short: "She is forever enthusiastic about learning new things and ...",
+              bio: "thinking outside the box. Quick-witted and focused, Anusha is someone who is very easy to approach and friendly with everyone.Her soothing voice is popular among her peers.",
+              instagram: "https://instagram.com/anusha.k.a",
+              linkedin: "https://www.linkedin.com/in/anushak25",
+              github: "https://github.com/AnushaKAdiga",
+              twitter: "",
+            },
+            {
+              name: "Bhuvan Koduru               ",
+              image: "/images/team/2022/bhuvan.jpg",
+              short: "*Enter cool guy with glasses emoji* ",
+bio:"The big ML boy in the house, he has a pun for every situation! Always grammatically correct, he knows his stuff, maybe a tad bit mean at times, but always looks out for you. And if you're looking for a good Telugu movie to watch, he's your guy.",              instagram: "https://instagram.com/bhuvan.koduru",
+              linkedin: "https://www.linkedin.com/in/bhuvankoduru",
+              github: "https://github.com/BhuvanKoduru",
+              twitter: "",
+            },
+          ],
+        ],
+
+        
+
+        
+        [
+          "UI/UX",
+          [
+            {
+              name: "Jeevika Bhat              ",
+              image: "/images/team/2022/Jeevika.jpg",
+              short: "Quiet and persevering, she is always ready ...",
+              bio:"for any challenge ahead of her. Jeevika is know for her creativity and talent when it comes to UI designing. Her amiable nature makes her someone easy to approach. She’s a self proclaimed melophile who appreciates good music.              ",
+              instagram: "https://www.instagram.com/jeevikabhat/",
+              linkedin:
+                "https://www.linkedin.com/in/jeevikabhat",
+              twitter: "",
+            },
+           ],
+        ],
+
+        [
+          "FLUTTER",
+          [
+            {
+              name: "Manjunath.R.K.              ",
+              image: "/images/team/2022/Manjunath.jpg",
+              short:
+                "Manjunath is a creative person who enjoys working with others and strongly..",
+            bio:` believes in the quote ‘necessity is the mother of invention’ but when it comes to his hobbies he believes ‘Necessity is the mother of all inversion’ if you are wondering why “inversion” it’s because drawing inverted/negative art is one of his hobby :) .He also loves to read books and look for loopholes in plots.`,
+                instagram: "https://www.instagram.com/_manjunath_r_k/",
+              github: "https://github.com/ManjunathRK1251",
+              linkedin: "www.linkedin.com/in/ManjunathRK1251",
+              twitter: "https://twitter.com/Manjunath_R_K_?t=vL0GvHNJZWYrpHD2_A1VMw&s=09",
+            },
+            {
+              name: "Akash N               ",
+              image: "/images/team/2022/akash.jpg",
+              short:
+                "Someone who loves to play sports and is a big fan of..",
+bio:` “King Kohli,” Akash is always up for anything fun. He is a good analyst and specialises in flutter. He is also known for completing his lab records before everyone else in the batch!`,
+              instagram: "https://www.instagram.com/akash_angadii/",
+              github: "https://github.com/AKASHANGADII",
+              linkedin: "https://www.linkedin.com/in/akash-n-aa9561203/",
+              twitter: "",
             },
           ],
         ],
         [
-          "TECH ADVISORS",
+          "ANDROID",
           [
             {
-              name: "Amith Kumar",
-              image: "/images/team/2019/Amith Kumar.jpg",
-              short: "He is ambitious and constantly tries to become...",
-              bio: "He is ambitious and constantly tries to become better. One can definitely say that he is a jack of all trades, who doesn't stop until he becomes master of all. This electronic enthusiast is obsessed with Ironman and his technology. With all this technological jargon you may think he is a self obsessed, and introvert,but he is a down to earth guy who loves 90s music and thinks everyone is a friend.",
-              instagram: "#",
-              github: "#",
-              linkedin: "#",
+              name: "Brahma Keerthi H S              ",
+              image: "/images/team/2022/Brahmakeerthi.jpg",
+              short: "We introduce to you, our finest Android expert!",
+              bio: "What's the use of having all the knowledge if you can't spread it. Well, Puneeth is an excellent public speaker and works on disseminating his knowledge to the world. He'll never say no if you seek help from him; He's patient and understanding. His hunger to learn new things never ends. Apart from being a big brain he is a super sweet guy and a big time foodie.",
+              instagram: "https://www.instagram.com/brahma_keerthi/",
+              github: "https://github.com/brahma-keerthi",
+              linkedin: "https://www.linkedin.com/in/brahma-keerthi/",
+              twitter: "https://twitter.com/brahma_keerthi",
+            },
+          ],
+        ],
+
+      ],
+    ],
+
+    [
+      "OPERATIONS TEAM",
+      [
+        [
+          "OPERATIONS EXECUTIVE",
+          [
+            {
+              name: "Preeti Alagundagi              ",
+              image: "/images/team/2022/Preeti.jpg",
+              short:
+                "She's a born leader, and an invaluable asset to the team ..",
+bio:"with her experience and resourcefulness. A badass, Preeti is never hesitant to express her opinions, offer guidance and give critical feedback wherever required. She is also a great swimmer!",              instagram: "https://medium.com/@shaikhfizashaikh",
+              github: "https://github.com/preeti1202",
+              linkedin: "http://linkedin.com/in/preeti-alagundagi-7186621ab",
+              twitter: "",
+              instagram:"https://instagram.com/preetikumar__?igshid=MWI4MTIyMDE=",
+            },
+          ],
+        ],
+
+        [
+          "INNOVATIONS EXECUTIVE",
+          [
+            {
+              name: "Jayesh V Jain              ",
+              image: "/images/team/2022/Jayesh.jpg",
+              short:
+                "Chances are, you've probably already seen him around the campus! ",
+bio:"This multi-tasker is extremely energetic and one of the friendliest faces around. Your social media guy, he's always there to help you out with his excellent management skills and extensive knowledge.",
+              instagram: "https://www.instagram.com/jayeshvjain",
+
+              linkedin: "https://www.linkedin.com/in/jayeshvjainn",
+      
+            },
+          ],
+        ],
+
+        [
+          "EVENT COORDINATION",
+          [
+            {
+              name: "Nehal Parekh              ",
+              image: "/images/team/2022/Nehal.jpg",
+              short:
+                "She's Gujju and she's proud! An extrovert, she loves..",
+bio:" dancing and meeting new people. She's confident, extremely talented and resourceful. An invaluable member of the team, she's a friend you can always count on. ",
+              linkedin: "https://www.linkedin.com/in/nehal-parekh-4b2389215",
+              github: "",
+              instagram: "https://instagram.com/nehal_parekh_?igshid=ZDdkNTZiNTM=",
+              twitter: "",
             },
             {
-              name: "Rakshak Gowda J",
-              image: "/images/team/2019/Rakshak Gowda J.jpeg",
-              short: "Big movie and anime buff...",
-              bio: "Big movie and anime buff. Cannot hold back when it comes to open world rpg gaming and food. Reliable and fun loving . Adept at coding. Likes to keep up to date with current technology and passionate about AI and Machine Learning.",
-              instagram: "#",
-              github: "#",
-              linkedin: "#",
+              name: "Kartik Sureja               ",
+              image: "/images/team/2022/karthik.jpg",
+              short:
+                "He is confident and is known for his excellent communication skills. Discussions involving..",
+bio:" money always intrigues him. He also loves to make new friends and interact with people. Football and basketball are his go to games.",
+              linkedin: "https://www.linkedin.com/in/kartik-sureja-188314212",
+              github: "https://github.com/kartiksureja",
+              instagram: "https://instagram.com/kartik._.sureja?igshid=NTA5ZTk1NTc=",
+              twitter: "",
+            },
+            {
+              name: "Ashwath Gupta              ",
+              image: "/images/team/2022/Ashwath.jpg",
+              short:
+                "One thing about him, he actively volunteers for tasks and speaks his mind.",
+bio:" With work, Ashwath is prompt and professional. He's communicative, makes you feel at ease and doesn't shy away from putting forth his ideas. He also loves table tennis.",
+              linkedin: "https://www.linkedin.com/in/ashwath-gupta-390854240/",
+              github: "https://github.com/ashwathgupta",
+              instagram: "https://www.instagram.com/ashwath_gupta/",
+              twitter: "https://twitter.com/ashwath_gupta",
             },
           ],
         ],
       ],
     ],
+
     [
-      "ORGANISATIONAL TEAM",
+      "CREATIVE TEAM",
       [
         [
-          "COMMUNICATION AND OUTREACH LEADS",
+          "COMMUNICATION AND OUTREACH",
           [
             {
-              name: "Chiranthan S",
-              image: "/images/team/2019/Chir - Chiranthan S.jpg",
-              short: "He might seem to be a loquacious person during...",
-              bio: "He might seem to be a loquacious person during the beginning. He acts as a spur to your ideas and has never failed in convincing the crowd to believe in him. He is interested in Machine learning and Cloud Computing aspects as well.He often keeps saying 'alone we can do so little, together we can do so much' and strongly believes in ideology of teamwork. An earnest companion one can wish for. He does his homework for the tasks assigned and won't let you down.",
-              instagram: "#",
-              github: "#",
-              linkedin: "#",
-            },
-            {
-              name: "Nimish L",
-              image: "/images/team/2019/Nimish Aarya.jpg",
-              short: "Meet Nimish Aarya, a kind of a guy who intends...",
-              bio: "Meet Nimish Aarya, a kind of a guy who intends to be loyal to everyone. His personality exceeds him. You can always tell him everything because he is a patient listener. Some of his interesting works are in Image processing and web development. Android development and Machine Learning has caught his interests. Being a part of this club, he too aspires to make the world a better place.",
-              instagram: "#",
-              github: "#",
-              linkedin: "#",
-            },
-            {
-              name: "Hymavathi B U",
-              image: "/images/face.jpg",
-              short: "She is an arrogant girl at the first look...",
-              bio: "She is an arrogant girl at the first look but a sweet and easygoing person after you get to know her.An ardent shopaholic and an ailurophile.A sci-fi fan,tech freak,crypto and stock market entusiast. She engages in conversations very easily and loves talking with people.Loves debating as if it's a hobby. Former AIESECer.",
-              instagram: "#",
-              github: "#",
-              linkedin: "#",
+              name: "Thanya Gangesh              ",
+              image: "/images/team/2022/Thanya.jpg",
+              short: "Articulate in her communication and expression, Thanya is quiet and ...",
+bio:"lowkey, with a confident and assertive personality. She loves playing basketball and badminton. A fan of 90's and 00's pop culture and cinema, she is an invaluable part of the team.",
+              instagram: "https://instagram.com/thanya.gangesh?igshid=MWI4MTIyMDE=",
+              linkedin:
+                "https://www.linkedin.com/in/thanya-gangesh-b7bb6a255",
+              github: "",
+              twitter: "",
             },
           ],
         ],
+
         [
-          "EVENT COVERAGE LEADS",
+          "EDITORIAL",
           [
             {
-              name: "Rishika",
-              image: "/images/team/2019/Rishika.jpg",
-              short: "Well,on first go she is a girl filled ...",
-              bio: "Well,on first go she is a girl filled with arrogance & attitude but only if you get to know about her...she isn't so.Dogs are the ones she cares about.Loves traveling around cause when you travel far enough,you meet yourself! Exploring new culture & interaction with new people is her forte So ya here she is ...Rishika from 3nd year CS",
-              instagram: "#",
-              github: "#",
-              linkedin: "#",
+              name: "Ninaad A Kaller"              ,
+              image: "/images/team/2022/ninaad.jpg",
+              short:
+                "He always understands the assignment. Be it putting up a great piece of...",
+bio:" writing or adding the subtle details that make all the difference! A fan of memes, dark humour and music(he's got taste, bet) and currently in his K-pop stan era. An introvert with a GenZ sense of humour and a great friend, no cap. When a task is assigned to him, he delivers, and that's on periodt. ",
+              instagram: "https://instagram.com/ninaad.a.k?igshid=ZDdkNTZiNTM=",
+              github: "",
+              linkedin: "https://www.linkedin.com/in/ninaad-a-kaller-48662322a",
+              twitter: "",
             },
             {
-              name: "Gowtham R",
-              image: "/images/team/2019/gowtham.jpg",
-              short: "He is a teaching volunteer at kalisu foundation...",
-              bio: "He is a teaching volunteer at kalisu foundation, an NGO working to improve the quality of education in the government schools. He has also volunteered as a coordinator for many events in that NGO.",
-              instagram: "#",
-              github: "#",
-              linkedin: "#",
+              name: "Shreeya Pai              ",
+              image: "/images/team/2022/Shreeya.jpg",
+              short: "She's that smart, mysterious low-key gyal, who works quietly and ...",
+bio:"lets her work make the noise. Having amazing writing skills and witty ideas, Shreeya loves anime(Light and Dazai simp), Arijit Singh, writing poetry and everything literature. She's your go-to person if you want to talk and chill about books, especially profound, poignant ones.",
+              instagram: "https://www.instagram.com/akash_udupa",
+              github: "",
+              linkedin:
+                "https://www.linkedin.com/in/shreeya-pai-a64a88220",
+              twitter: "",
+            },
+          ],
+        ],
+
+        [
+          "GRAPHIC DESIGNING",
+          [
+            {
+              name: "Darshan B S"              ,
+              image: "/images/team/2022/Darshan.jpg",
+              short:
+                "A quiet and laid back person who makes everyone around him comfortable..",
+bio:" Darshan loves sports and bike riding. Learning about the simple things in life intrigues him. He is also someone who is known for doing his job perfectly and helping those around him.",
+              instagram: "https://www.instagram.com/darshan_bs_01/",
+              github: "https://github.com/darshanbs1",
+              linkedin: "https://www.linkedin.com/in/darshanbs1/",
+              twitter: "https://twitter.com/darshanbs1",
+            },
+            {
+              name: "Dhanya Shekar D.C              "              ,
+              image: "/images/team/2022/Dhanya.jpg",
+              short:
+                "She's always on the move - a person who loves travelling and is a foodie! ",
+bio:"A sweet extrovert who is also an amazing graphic designer, Dhanya believes in living life to its fullest and exploring the world!",
+              instagram: "https://instagram.com/dhanyadaali?igshid=YmMyMTA2M2Y=",
+              github: "https://github.com/dhanyadaali?t=YBsmLb55XgBggCF1imCnFg&s=09",
+              linkedin: "https://www.linkedin.com/in/dhanya-shekar-d-c-8a2979224",
+              twitter: "https://twitter.com/dhanyadaali13?t=YBsmLb55XgBggCF1imCnFg&s=09",
             },
           ],
         ],
@@ -185,37 +435,15 @@ const teamData2022 = {
           "PHOTOGRAPHY AND VIDEO EDITING",
           [
             {
-              name: "Chyavan M C",
-              image: "/images/team/2019/Chyavan MC.jpeg",
-              short: "Chyavan is a hardcore film and music enthusiast...",
-              bio: "Chyavan is a hardcore film and music enthusiast and a critic. He is constantly trying out videography and music stuff himself. That makes him perfect for the position as the club's photographer and videographer. He's also a pretty decent coder fluent in Python and Java, and is always looking for hackathons and workshops to test his skills (which he fails most of the times but is never gets bored of).",
-              instagram: "#",
-              github: "#",
-              linkedin: "#",
-            },
-
-            {
-              name: "Srivatsa M N",
-              image: "/images/team/2019/Srivatsa MN.jpeg",
-              short: "He is someone who is always willing to know...",
-              bio: "He is someone who is always willing to know more and learn about anything that seems interesting. A certain contributor for discussions on current trends with frank opinions. His love for traveling , music , homemade food and thriller movies/TV shows is eternal. With industry experience related to photography under his belt, he is eager to show his diligence through his works as a photography and video coverage lead of the institution's DSC club.",
-              instagram: "#",
-              github: "#",
-              linkedin: "#",
-            },
-          ],
-        ],
-        [
-          "CONTENT DEVELOPER",
-          [
-            {
-              name: "Triveni",
-              image: "/images/team/2019/triveni.jpg",
-              short: "Well organized,eager to learn and ambitious...",
-              bio: "Well organized,eager to learn and ambitious person. Loves to explore new technologies and ideas.Cooking and sketching gives her butterflies. Passionate about meeting new people and learning new concepts. Food and Dogs gives her cloud nine feelings. And Being a minion freak makes her happy as a clam.",
-              instagram: "#",
-              github: "#",
-              linkedin: "#",
+              name: "Adarsh Kamath              "              ,
+              image: "/images/team/2022/adarsh2.jpg",
+              short:
+                "Being a wizard of photography, Adarsh is a bubbly and bespectacled dude, who's very..",
+bio:" approachable. Conversations with him are interesting, bordering on ludicrous, and funny, and you'll most likely end up having a good laugh.",
+              instagram: "https://instagram.com/adarsh_kamath?igshid=ZDdkNTZiNTM=",
+              github: "https://github.com/Adarshkamath2",
+              linkedin: "https://www.linkedin.com/in/adarsh-kamath-462b36223",
+              twitter: "https://twitter.com/Adarshkamath02?t=SmHFX5ISkgsuP5U2vnWWnQ&s=09",
             },
           ],
         ],
@@ -224,4 +452,4 @@ const teamData2022 = {
   ],
 };
 
-export default teamData2022;
+export default teamData2021;

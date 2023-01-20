@@ -1,36 +1,15 @@
-import Card from "../components/HomeCard";
 import MentorCard from "../components/MentorCard";
 
 import { useRef, useContext, useEffect } from "react";
 import ThemeContext from "../contexts/ThemeContext";
-import { motion as m, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
+import { motion as m } from "framer-motion";
 // Images
-import Img_satellite from "../assets/home_page/satellite.svg";
 import Img_downarrow_light from "../assets/home_page/downarrow_light.svg";
 import Img_downarrow_dark from "../assets/home_page/downarrow_dark.svg";
-import Img_saturn from "../assets/home_page/saturn.svg";
-import Img_cloud from "../assets/home_page/cloud.svg";
-import Img_sun from "../assets/home_page/sun.svg";
-import Img_rocket_test from "../assets/home_page/rocket-ship-remove2.png";
-import Img_star from "../assets/home_page/star.svg";
-import Img_moon from "../assets/home_page/moon.svg";
-
-// Logos
-import logo_light from "../assets/common/DSC JSS Science and Technology University Light Logo.png";
-import logo_dark from "../assets/common/DSC JSS Science and Technology University Dark Logo.png";
+import mentorImg from "/images/hod.jpg";
 
 // Icons
-import {
-  RiInstagramLine,
-  RiLinkedinBoxFill,
-  RiGithubFill,
-  RiMediumFill,
-  RiYoutubeFill,
-  RiTwitterFill,
-  RiSunFill,
-  RiMoonFill,
-} from "react-icons/ri";
+import { RiSunFill, RiMoonFill } from "react-icons/ri";
 import { TeamIcon } from "../utils/teamsvg";
 import TeamSection from "../components/TeamSection";
 
@@ -124,7 +103,6 @@ const Team = ({ scrollContainer }) => {
           <div
             className=" absolute sm:hidden cursor-pointer right-5 top-5 text-2xl dark:text-lightnav dark:hover:text-yellow-400 z-10"
             onClick={() => {
-              console.log("clicked");
               changeTheme();
             }}
           >
@@ -147,8 +125,9 @@ const Team = ({ scrollContainer }) => {
       </div>
       <MentorCard
         title="Our Mentor"
-        name="Dr. Anilkumar K M"
-        bio="absdcskdjcc adcjandc iuadc af ksdnc aidnca sdcn auhdc s  ci caudjc andkcn aksjdcn sdca dcn acn acd she iddc dc he is very dynamic and very supportive in nature not old fashioned very knowledgable person"
+        name="Dr. M P Pushpalatha"
+        bio="Currently (in 2021), head of the department of Computer Science and Engineering, with nearly three decades of teaching experience. Passionate and committed to inspire students to pursue academic and personal excellence. Driven by the motto, “Anything worth doing is worth doing well,” to create a challenging and engaging learning environment for students and self. My research focuses mainly on Machine Learning and Healthcare Informatics with a particular emphasis on the applications of healthcare technology to socially relevant issues. Currently guiding 6 PhD students with more than 50 research publications in reputed journals"
+        faceimage={mentorImg}
         currentRef={mentorRef}
         nextRef={teamRef}
         isDark={isDark}

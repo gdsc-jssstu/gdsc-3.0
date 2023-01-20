@@ -31,17 +31,7 @@ const delayEntryVariants = {
   }),
 };
 
-function TeamSection({
-  isEnd,
-  isDark,
-  FloatImg,
-  children,
-  title,
-  content,
-  nextRef,
-  currentRef,
-  handleRef,
-}) {
+function TeamSection({ isDark, currentRef }) {
   const [page, setPage] = useState("2022");
   const team = teamData[page];
   //const staffData = team.staffData;
@@ -60,7 +50,6 @@ function TeamSection({
       });
     }
   });
-  console.log(team);
 
   return (
     <m.div
@@ -79,7 +68,6 @@ function TeamSection({
             value={page}
             onChange={(e) => {
               setPage(e.target.value);
-              console.log(page);
             }}
             label="Chapter"
           >
@@ -93,7 +81,12 @@ function TeamSection({
         <MentorCard
           title="Our Lead"
           name={leadData.name}
-          bio="absdcskdjcc adcjandc iuadc af ksdnc aidnca sdcn auhdc s  ci caudjc andkcn aksjdcn sdca dcn acn acd she iddc dc he is very dynamic and very supportive in nature not old fashioned very knowledgable person"
+          bio={leadData.bio}
+          faceimage={leadData.image}
+          gitlink={leadData.github}
+          instalink={leadData.instagram}
+          linkedlink={leadData.linkedin}
+          twitterlink={leadData.twitter}
           isDark={isDark}
           isEnd={true}
         />
@@ -106,7 +99,16 @@ function TeamSection({
             {execomData.map(
               (execom) =>
                 typeof execom != "string" && (
-                  <MemberCard name={execom.name} bio={execom.short} />
+                  <MemberCard
+                    name={execom.name}
+                    gitlink={execom.github}
+                    instalink={execom.instagram}
+                    linkedlink={execom.linkedin}
+                    twitterlink={execom.twitter}
+                    bio={execom.short}
+                    faceimage={execom.image}
+                    desc={execom.bio}
+                  />
                 )
             )}
           </div>
@@ -128,10 +130,17 @@ function TeamSection({
                     </div>
                   ) : (
                     <div className="flex flex-col items-center w-full lg:justify-around flex-wrap lg:flex-row">
+                      {console.log(subTeam)}
                       {subTeam.map((subTeamData, idx) => (
                         <MemberCard
                           name={subTeamData.name}
                           bio={subTeamData.short}
+                          desc={subTeamData.bio}
+                          gitlink={subTeamData.github}
+                          instalink={subTeamData.instagram}
+                          linkedlink={subTeamData.linkedin}
+                          twitterlink={subTeamData.twitter}
+                          faceimage={subTeamData.image}
                         />
                       ))}
                     </div>
