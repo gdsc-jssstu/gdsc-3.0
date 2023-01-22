@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import { motion as m } from "framer-motion";
 import EventsCard from '../components/EventsCard';
 import AOS from 'aos';
@@ -106,7 +106,7 @@ const Events = ({scrollContainer}) => {
                 </div>
             </div>
             
-            <div className='grid grid-cols-1 h-20 justify-items-center gap-y-10'>
+            <div className='grid grid-cols-1 h-20 justify-items-center gap-y-10 p-2'>
                 {/* {eventsgdsc?.map((item, i)=>(
                     <EventsCard 
                         className="animation"

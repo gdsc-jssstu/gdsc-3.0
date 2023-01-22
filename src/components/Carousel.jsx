@@ -44,7 +44,7 @@ const Carousel = ({images}) => {
       }
     };
     const arrowStyle =
-      'absolute text-white text-2xl z-10 h-15 w-15 rounded-full opacity-75 flex';
+      'absolute text-white text-2xl z-10 h-15 w-15 opacity-75 flex';
     const sliderControl = isLeft => (
       <button
         type="button"
@@ -70,13 +70,13 @@ const Carousel = ({images}) => {
       <div className="p-12 flex justify-center w-screen md:w-1/2 items-center">
         <div className="relative w-screen place-items-center">
           <div style={caraousel}>
-            {images.length > 1 ? sliderControl(true) : null}
+            {images.length > 1 && sliderControl(true)}               
             {images?.map((img, i) => (
               <div className="flex w-full flex-shrink-0 justify-items-center" key={img} ref={refs[i]}>
                 <img src={imageUrlFor(img.asset._ref).url()} className="w-full object-contain" />
               </div>
             ))}
-            {images.length > 1 ? sliderControl() : null}
+            {images.length > 1 && sliderControl()}
           </div>
         </div>
       </div>
