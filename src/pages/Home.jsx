@@ -294,7 +294,7 @@ const Home = ({ scrollContainer }) => {
         )}
       >
         <button className=" bg-blue-500 rounded-lg p-2 text-lg text-lightbg">
-          Official Website
+          <a href="https://jssstuniv.in">Official Website</a> 
         </button>
       </Card>
 
@@ -318,7 +318,7 @@ const Home = ({ scrollContainer }) => {
         )}
       >
         <button className=" bg-blue-500 rounded-lg px-6 py-2 text-lg text-lightbg">
-          Meet The Team!
+          <Link to={"/Team"}>Meet The Team!</Link> 
         </button>
       </Card>
 
@@ -366,7 +366,7 @@ const Home = ({ scrollContainer }) => {
         )}
       >
         <button className=" bg-blue-500 rounded-lg px-6 py-2 text-lg text-lightbg">
-          Check It Out!
+          <a href="https://medium.com/dscjssstu"> Check It Out!</a>
         </button>
       </Card>
 
@@ -391,22 +391,22 @@ const Home = ({ scrollContainer }) => {
       >
         <ul className="flex gap-x-4 text-4xl sm:text-5xl">
           <li className="  hover:scale-110 text-pink-600">
-            <RiInstagramLine />
+            <a href="https://instagram.com/gdscjssstu?igshid=YmMyMTA2M2Y="><RiInstagramLine /></a> 
           </li>
           <li className="  hover:scale-110 text-blue-500">
-            <RiLinkedinBoxFill />
+            <a href="https://www.linkedin.com/company/dsc-jssstu/"><RiLinkedinBoxFill /></a> 
           </li>
           <li className=" hover:scale-110">
-            <RiGithubFill />
+            <a href="https://github.com/gdsc-jssstu"><RiGithubFill /></a> 
           </li>
           <li className="  hover:scale-110 rounded-full overflow-hidden">
-            <RiMediumFill />
+           <a href="https://medium.com/dscjssstu"><RiMediumFill /></a> 
           </li>
           <li className="  hover:scale-110 text-red-600">
-            <RiYoutubeFill />
+           <a href="https://www.youtube.com/@gdscjssstu5086/featured"><RiYoutubeFill /></a> 
           </li>
           <li className="  hover:scale-110  text-blue-600">
-            <RiTwitterFill />
+            <a href="https://twitter.com/gdscjssstu"><RiTwitterFill /></a> 
           </li>
         </ul>
       </Card>
@@ -432,10 +432,10 @@ const Home = ({ scrollContainer }) => {
       >
         <div className=" flex flex-row  gap-y-4  gap-x-10 md:gap-x-20">
           <button className=" bg-blue-500 rounded-lg px-6 py-2 text-lg text-lightbg">
-            Discord
+          <a href="https://discord.gg/SxpXUApP">Discord</a>  
           </button>
           <button className=" bg-blue-500 rounded-lg px-6 py-2 text-lg text-lightbg">
-            Subscribe
+          <a href="https://www.youtube.com/@gdscjssstu5086/featured">Subscribe</a>  
           </button>
         </div>
       </Card>
@@ -460,7 +460,7 @@ const Home = ({ scrollContainer }) => {
         )}
       >
         <button className=" bg-blue-500 rounded-lg px-6 py-2 text-lg text-lightbg">
-          Submit Ideas
+         <a href="https://instagram.com/gdscjssstu?igshid=YmMyMTA2M2Y=">Submit Ideas</a> 
         </button>
       </Card>
 
