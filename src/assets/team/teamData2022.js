@@ -1,10 +1,10 @@
-const teamData2021 = {
+const teamData2022 = {
   staffData: {
     title: "GDSC MENTOR",
-    name: "Dr. M P Pushpalatha",
-    image: "/images/hod.jpg",
+    name: "Dr Anil Kumar K M ",
+    image: "/images/anilkumar.jpeg",
     blurDataURL: "LRLUZ~Ri]VozL$xbV@Rj?uM{Oqof",
-    bio: "Currently (in 2021), head of the department of Computer Science and Engineering, with nearly three decades of teaching experience. Passionate and committed to inspire students to pursue academic and personal excellence. Driven by the motto, “Anything worth doing is worth doing well,” to create a challenging and engaging learning environment for students and self. My research focuses mainly on Machine Learning and Healthcare Informatics with a particular emphasis on the applications of healthcare technology to socially relevant issues. Currently guiding 6 PhD students with more than 50 research publications in reputed journals",
+    bio: "Currently serving as Professor in the Department of Computer Science and Engineering, with nearly two and half decades of teaching and research experience. \"Learning never exhausts the mind.\" A dedicated scholar and committed to teaching and instilling excellence among students, his areas of interest are Text Mining, Sentiment Analysis, Data mining,  - with more than 40 publications in various reputed journals and an acumen for research.",
     instagram: "",
     linkedin: "",
     github: "",
@@ -452,4 +452,4 @@ bio:" approachable. Conversations with him are interesting, bordering on ludicro
   ],
 };
 
-export default teamData2021;
+export default teamData2022;
