@@ -53,10 +53,10 @@ const Navbar = ({ scrollYValue }) => {
             <Link to="/projects">Projects</Link>
           </li>
           <li>
-            <Link to="/">Blog</Link>
+            <a href="https://medium.com/dscjssstu">Blog</a>
           </li>
           <li className="whitespace-nowrap">
-            <Link to="/">Contact Us</Link>
+            <a href="https://instagram.com/gdscjssstu?igshid=YmMyMTA2M2Y=">Contact Us</a>
           </li> 
           <li
             className="mr-5 cursor-pointer dark:hover:text-yellow-400  hover:scale-110 text-2xl"
