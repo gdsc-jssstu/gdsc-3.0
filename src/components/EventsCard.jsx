@@ -44,7 +44,7 @@ const EventsCard = ({title, date, content, images}) => {
             <div className="w-full flex flex-col items-center bg-white border rounded-lg shadow-md md:flex-row max-w-7xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                 {/* {images ? (<Carousel 
                   images = {images}/> ) : <></>}  */}
-                  {
+                  {/* {
                     images ? (
                       images.length > 1 ? (
                         <Carousel
@@ -52,10 +52,13 @@ const EventsCard = ({title, date, content, images}) => {
                         />
                       ) :
                       <div styles={myStyles} className="p-12 flex justify-center w-screen md:w-1/2 items-center">
-                        <img src = {imageUrlFor(images[0].asset._ref).url()} className="w-5/6 object-contain"></img>
+                        <img src = {imageUrlFor(images[0].asset._ref).url()} className="w-screen object-contain"></img>
                       </div>
                     ) : null
-                  }
+                  } */}
+                  <Carousel
+                    images = {images}
+                    />
                 <div className="flex flex-col justify-between p-4 leading-normal">
                     <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                     <m.h6
