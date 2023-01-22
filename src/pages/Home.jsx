@@ -122,7 +122,6 @@ const Home = ({ scrollContainer }) => {
           <div
             className=" absolute sm:hidden cursor-pointer right-5 top-5 text-2xl dark:text-lightnav dark:hover:text-yellow-400 z-10"
             onClick={() => {
-              console.log("clicked");
               changeTheme();
             }}
           >
