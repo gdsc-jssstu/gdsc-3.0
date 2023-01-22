@@ -57,7 +57,7 @@ const Navbar = ({ scrollYValue }) => {
           </li>
           <li className="whitespace-nowrap">
             <Link to="/">Contact Us</Link>
-          </li>
+          </li> 
           <li
             className="mr-5 cursor-pointer dark:hover:text-yellow-400  hover:scale-110 text-2xl"
             onClick={changeTheme}
@@ -71,7 +71,7 @@ const Navbar = ({ scrollYValue }) => {
       >
         <ul className="  flex w-full h-full  justify-around ">
           <SmallNavBarItems title="Home" Icon={RiHome5Fill} path="/" />
-          <SmallNavBarItems title="Team" Icon={RiTeamFill} path="/" />
+          <SmallNavBarItems title="Team" Icon={RiTeamFill} path="/team" />
           <SmallNavBarItems
             title="Events"
             Icon={RiCalendarEventFill}
@@ -82,7 +82,7 @@ const Navbar = ({ scrollYValue }) => {
             Icon={RiLightbulbFill}
             path="/projects"
           />
-          <SmallNavBarItems title="Contact Us" Icon={RiMailFill} path="/" />
+          {/*<SmallNavBarItems title="Contact Us" Icon={RiMailFill} path="/" />*/}
         </ul>
       </nav>
     </>
@@ -93,10 +93,10 @@ const SmallNavBarItems = ({ Icon, title, path }) => {
   return (
     <li className="flex flex-col justify-end items-center w-full dark:text-lightbg">
       <Link to={path}>
-        <div className="text-2xl hover:scale-110 ">
+        <div className="text-2xl flex  hover:scale-110 ">
           <Icon />
         </div>
-        <span className=" text-sm">{title}</span>
+        <span className="text-sm ml-[-7px]">{title}</span>
       </Link>
     </li>
   );
