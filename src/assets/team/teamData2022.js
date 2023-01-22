@@ -66,8 +66,8 @@ const teamData2021 = {
             {
               name: "Poorvi Shetty              ",
               image: "/images/team/2022/poorvi.jpg",
-              short: "Jack of all and master of all! ",
-              bio: "This nocturnal hooman is incredibly sweet and always enthusiastic about tech. He is one of those rarity who praises the computer from its hardware to its software. He is not the one to lose out on sleep, compensates all his lost hours of sleep during the day. His eyes sparkle everytime someone mentions old technology. When in doubt, reach out to Alaap! He is the saviour when internals are around the corner. He’s got some impressive keyboard skills.",
+              short: `If the phrase "A ball of sunshine" was a person... `,
+              bio:"...it'd definitely be Poorvi! Described as the Dhoni of the club, she's known as the smartest and the coolest person. She's the one person you know you can be comfortable around, her welcoming smile will only reassure you about that. She aces everything, be it web dev or content writing.",
               instagram: "https://www.instagram.com/poorvi__shetty/",
               github: "https://github.com/PoorviShetty",
               linkedin: "https://www.linkedin.com/in/poorvi-shetty/",
