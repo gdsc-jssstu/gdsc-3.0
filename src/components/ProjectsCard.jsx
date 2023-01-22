@@ -25,14 +25,14 @@ const ProjectsCard = ({title,content,links,img}) => {
   // if(links[1].youtube !== "") count++;
   // if(links[2].extern !== "") count++;
   return (
-    <div className="max-w-sm rounded-lg shadow-lg dark:text-lightbg dark:bg-gray-800 pb-10">
+    <div className="max-w-sm rounded-lg shadow-lg dark:text-lightbg dark:bg-gray-800 pb-10 h-full">
       <m.img 
       initial="hidden"
       whileInView="visible"
       custom={1}
       viewport={{ once: true, amount: 0.1 }}
       variants={delayEntryVariants}
-      className="w-full rounded-t-lg" 
+      className="w-full rounded-t-lg h-60" 
       src={imageUrlFor(img).url()} 
       alt="GDSC">
       </m.img>
@@ -75,6 +75,8 @@ const ProjectsCard = ({title,content,links,img}) => {
             return (
               <a href={link} className="w-full h-7"><img src={LinkIcon} className="w-full h-7"></img></a>
             )
+          }else{
+            return null;
           }
             
         })}
