@@ -485,7 +485,8 @@ const Home = ({ scrollContainer }) => {
         )}
       >
         <button className=" bg-blue-500 rounded-lg px-6 py-2 text-lg text-lightbg">
-          Projects
+          <Link to = '/Projects'>Projects</Link>
+          
         </button>
       </Card>
     </main>
