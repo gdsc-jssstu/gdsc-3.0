@@ -265,8 +265,8 @@ bio:` “King Kohli,” Akash is always up for anything fun. He is a good analys
             {
               name: "Brahma Keerthi H S              ",
               image: "/images/team/2022/Brahmakeerthi.jpg",
-              short: "We introduce to you, our finest Android expert!",
-              bio: "What's the use of having all the knowledge if you can't spread it. Well, Puneeth is an excellent public speaker and works on disseminating his knowledge to the world. He'll never say no if you seek help from him; He's patient and understanding. His hunger to learn new things never ends. Apart from being a big brain he is a super sweet guy and a big time foodie.",
+              short: "A simple guy with big aspirations.",
+              bio: "Introvert who thinks 4729382 times before speaking. Loves to play games, Cricket being one of his favourite sport.  He is Happy-go-Lucky person and bunking the classes is his first preference anytime!!",
               instagram: "https://www.instagram.com/brahma_keerthi/",
               github: "https://github.com/brahma-keerthi",
               linkedin: "https://www.linkedin.com/in/brahma-keerthi/",
