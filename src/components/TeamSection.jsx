@@ -125,12 +125,11 @@ function TeamSection({ isDark, currentRef }) {
               subVal.map((subTeam) => (
                 <div className="flex my-6  w-full flex-col items-center justify-center">
                   {typeof subTeam === "string" ? (
-                    <div className="font-bold text-2xl dark:text-lightnav">
+                    <div className="font-bold text-center text-2xl dark:text-lightnav">
                       {subTeam}
                     </div>
                   ) : (
                     <div className="flex flex-col items-center w-full lg:justify-around flex-wrap lg:flex-row">
-                      {console.log(subTeam)}
                       {subTeam.map((subTeamData, idx) => (
                         <MemberCard
                           name={subTeamData.name}

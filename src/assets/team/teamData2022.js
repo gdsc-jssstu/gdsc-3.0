@@ -158,7 +158,7 @@ const teamData2022 = {
           [
             {
               name: "Chandan S Gowda",
-              image: "/images/team/2022/chandan.jpg",
+              image: "/images/team/2022/chandan2.jpg",
               short: "An ambivert who loves fitness and eating healthy. He is..",
               bio: " hard working and passionate about technology. Success makes him happy and he’s never afraid to step out of his comfort zone. He loves to play cricket and building startups. The only sad thing is he doesn't like marvel :)",
                instagram: "https://www.instagram.com/i_am_csg/",
@@ -289,7 +289,7 @@ bio:` “King Kohli,” Akash is always up for anything fun. He is a good analys
               image: "/images/team/2022/Preeti.jpg",
               short:
                 "She's a born leader, and an invaluable asset to the team ..",
-bio:"with her experience and resourcefulness. A badass, Preeti is never hesitant to express her opinions, offer guidance and give critical feedback wherever required. She is also a great swimmer!",              instagram: "https://medium.com/@shaikhfizashaikh",
+bio:"with her experience and resourcefulness. Preeti is never hesitant to express her opinions, offer guidance and give critical feedback wherever required. She is also a great swimmer!",              instagram: "https://medium.com/@shaikhfizashaikh",
               github: "https://github.com/preeti1202",
               linkedin: "http://linkedin.com/in/preeti-alagundagi-7186621ab",
               twitter: "",
