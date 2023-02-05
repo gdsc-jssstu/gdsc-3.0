@@ -1,5 +1,8 @@
 # readme
 
+Official GDSC JSSSTU website with modern UI and Content management system integration for quick and easy event, project updates.
+
+
 ## npm install
 
 To install all the dependencies
