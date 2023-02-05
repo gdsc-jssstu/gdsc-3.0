@@ -53,7 +53,7 @@ const MentorCard = ({
       whileInView="visible"
       viewport={{ once: true }}
       variants={cardVariants}
-      className="relative m-2 snap-start h-[calc(100vh_-_3.5rem)] overflow-hidden"
+      className="relative m-2 snap-start h-[calc(100vh_-_3.5rem)]"
     >
       <div className="h-[85vh] dark:text-lightbg flex flex-col justify-around items-center ">
         <h1 className="text-center text-5xl font-bold">{title}</h1>
