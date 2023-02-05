@@ -45,7 +45,7 @@ const MemberCard = ({
         </div>
         <div className="flex flex-col justify-center text-center items-center w-full">
           <h3 className=" text-lg font-bold ">{name}</h3>
-          <div className="flex text-4xl justify-around m-1 items-center w-6/12 cursor-pointer">
+          <div className="flex text-4xl justify-around m-1 items-center w-6/12 cursor-pointer gap-x-2">
             {gitlink && (
               <a href={gitlink} target="_blank" rel="noopener noreferrer">
                 <RiGithubFill className="hover:scale-110" />
