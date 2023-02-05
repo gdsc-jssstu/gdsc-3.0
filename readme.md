@@ -1,4 +1,4 @@
-# readme
+# GDSC JSSSTU WEBSITE
 
 Official GDSC JSSSTU website with modern UI and Content management system integration for quick and easy event, project updates.
 
