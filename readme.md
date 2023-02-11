@@ -32,6 +32,13 @@ To start sanity server
 sanity start
 ```
 
+## Contributors
+
+<a href="https://github.com/gdsc-jssstu/gdsc-3.0/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=gdsc-jssstu/gdsc-3.0" />
+</a>
+
+
 # Important
 
 - Apply class "h-[calc(100vh_-_3.5rem)]" to the outermost container of the page 3.5rem is for the navbar
