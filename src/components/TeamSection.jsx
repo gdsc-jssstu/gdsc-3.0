@@ -64,7 +64,7 @@ function TeamSection({ isDark, currentRef }) {
         <div className="flex w-64 justify-around  items-center text-darknav m-3">
           <div className="dark:text-lightnav">Chapter:</div>
           <select
-            class="block appearance-none w-6/12 p-2 cursor-pointer  bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+            className="block appearance-none w-6/12 p-2 cursor-pointer  bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
             value={page}
             onChange={(e) => {
               setPage(e.target.value);
@@ -132,6 +132,7 @@ function TeamSection({ isDark, currentRef }) {
                     <div className="flex flex-col items-center w-full lg:justify-around flex-wrap lg:flex-row">
                       {subTeam.map((subTeamData, idx) => (
                         <MemberCard
+                          key={idx}
                           name={subTeamData.name}
                           bio={subTeamData.short}
                           desc={subTeamData.bio}

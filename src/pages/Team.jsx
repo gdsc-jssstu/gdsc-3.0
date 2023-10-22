@@ -6,7 +6,8 @@ import { motion as m } from "framer-motion";
 // Images
 import Img_downarrow_light from "../assets/home_page/downarrow_light.svg";
 import Img_downarrow_dark from "../assets/home_page/downarrow_dark.svg";
-import Img_mentor from "/images/anilkumar.jpeg";
+// import Img_mentor from "../anilkumar.jpeg";
+import Img_mentor from "../assets/images/anilkumar.webp"
 
 // Icons
 import { RiSunFill, RiMoonFill } from "react-icons/ri";
