@@ -41,7 +41,7 @@ const MemberCard = ({
     >
       <div className="backdrop-filter backdrop-blur-lg bg-opacity-20 bg-lightnav text-darknav dark:text-lightnav border border-gray-500 w-72 h-96 rounded-lg p-6 flex flex-col justify-center md:max-w-96 items-center gap-y-4">
         <div className="w-40 min-h-[45%] aspect-square rounded-full ">
-          <img className="rounded-full" src={faceimage} alt="avail" />
+          <img width="1024" height="1024" className="rounded-full" src={faceimage} loading="lazy" alt="avail" />
         </div>
         <div className="flex flex-col justify-center text-center items-center w-full">
           <h3 className=" text-lg font-bold ">{name}</h3>
