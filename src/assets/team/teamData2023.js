@@ -18,7 +18,7 @@ const teamData2023 = {
     name: "Ashwath Gupta",
     image: require("../images/team/2023/Ashwath.webp"),
     blurDataURL: "LsN]%q~V%LE2?aR*RjRQRQRQt7xt",
-    bio: `The powerhouse of the club, he knows exactly how to lead the way. One of the sweetest people out there, he's someone you can always count on. This caffeine addict manages to bring the best out of people, all with a smile on her face. And what's sweeter than her personality is her voice, you gotta listen to her sing!`
+    bio: `" With work, Ashwath is prompt and professional. He's communicative, makes you feel at ease and doesn't shy away from putting forth his ideas. He also loves table tennis.`
     ,
     linkedin: "https://www.linkedin.com/in/ashwath-gupta-390854240/",
     github: "https://github.com/ashwathgupta",
@@ -26,8 +26,33 @@ const teamData2023 = {
     twitter: "https://twitter.com/ashwath_gupta",
   },
 
-  execomData: [],
+  execomData: [
+    "EXECOM",
+    {
+        name: "Vikhyat G Gowda              ",
+        image: require("../images/team/2023/vikyath.webp"),
+        short:
+          "Vikhyat is hardworking, intelligent and super friendly. He may be shy but..",
+        bio: ` that only adds to the whole "paapa" factor, and we are ready to protect him at all costs. Along with being a web development pro, he loves reading and playing badminton!              `,
+        instagram: "https://instagram.com/divideby.zero._?igshid=ZDdkNTZiNTM=",
+        linkedin: "https://www.linkedin.com/in/vikhyat-gowda",
+        github: "https://github.com/vikhyat-gowda",
+        twitter: "",
+    },
+    {
+      name: "Ninaad A Kaller",
+      image: require("../images/team/2023/ninaad.webp"),
+      short:
+        "He always understands the assignment. Be it putting up a great piece of...",
+      bio: " writing or adding the subtle details that make all the difference! A fan of memes, dark humour and music(he's got taste, bet) and currently in his K-pop stan era. An introvert with a GenZ sense of humour and a great friend, no cap. When a task is assigned to him, he delivers, and that's on periodt. ",
+      instagram: "https://instagram.com/ninaad.a.k?igshid=ZDdkNTZiNTM=",
+      github: "",
+      linkedin: "https://www.linkedin.com/in/ninaad-a-kaller-48662322a",
+      twitter: "",
+    },
+  ],
 
+  
   teamData: [
     [
       "TECHNICAL TEAM",
@@ -65,23 +90,8 @@ const teamData2023 = {
             },
           ],
         ],
-        [
-          "TECH LEAD",
-          [
-            {
-              name: "Vikhyat G Gowda              ",
-              image: require("../images/team/2023/vikyath.webp"),
-              short:
-                "Vikhyat is hardworking, intelligent and super friendly. He may be shy but..",
-              bio: ` that only adds to the whole "paapa" factor, and we are ready to protect him at all costs. Along with being a web development pro, he loves reading and playing badminton!              `,
-              instagram: "https://instagram.com/divideby.zero._?igshid=ZDdkNTZiNTM=",
-              linkedin: "https://www.linkedin.com/in/vikhyat-gowda",
-              github: "https://github.com/vikhyat-gowda",
-              twitter: "https://twitter.com/dividebyZerooo?t=-EFmrSM0aqZGnw79wqcCKQ&s=09",
-            },
 
-          ],
-        ],
+
         [
           "WOMEN IN TECH",
           [
@@ -232,8 +242,8 @@ const teamData2023 = {
             {
               name: "Anagha Honnali              ",
               image: require("../images/team/2023/Anagha.webp"),
-              short: "Diligent and diplomatic , Kashyap is an avid fan of..",
-              bio: " How   I Met Your Mother and quality music. His sense of humor and wit has earned him the title of being Chandler of GDSC. He plays football and piano in his spare time.",
+              short: "Anagha defines the word ‘sweet’.",
+              bio: " She is a humble, down to earth hooman with extraordinary skills. Anagha has that serene, placid and reticent look on her face always. She's one of those who gets work done in silence without letting the neighbours know. Anagha knows her deal, she is confident with her tech skills and excellent with her verbal abilities. She is an overall package of fun-loving and hardworking.",
               instagram: "https://www.instagram.com/anagha.honnali/",
               linkedin: "https://www.linkedin.com/in/anaghahonnali/",
               github: "https://github.com/anagha-h",
@@ -403,22 +413,6 @@ const teamData2023 = {
           ],
         ],
 
-        [
-          "INNOVOPS LEAD",
-          [
-            {
-              name: "Ninaad A Kaller",
-              image: require("../images/team/2023/ninaad.webp"),
-              short:
-                "He always understands the assignment. Be it putting up a great piece of...",
-              bio: " writing or adding the subtle details that make all the difference! A fan of memes, dark humour and music(he's got taste, bet) and currently in his K-pop stan era. An introvert with a GenZ sense of humour and a great friend, no cap. When a task is assigned to him, he delivers, and that's on periodt. ",
-              instagram: "https://instagram.com/ninaad.a.k?igshid=ZDdkNTZiNTM=",
-              github: "",
-              linkedin: "https://www.linkedin.com/in/ninaad-a-kaller-48662322a",
-              twitter: "",
-            },
-          ],
-        ],
 
         [
           "EVENT COORDINATION",
