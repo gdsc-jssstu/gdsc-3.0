@@ -18,7 +18,11 @@ const teamData2023 = {
     name: "Ashwath Gupta",
     image: require("../images/team/2023/Ashwath.webp"),
     blurDataURL: "LsN]%q~V%LE2?aR*RjRQRQRQt7xt",
-    bio: `" With work, Ashwath is prompt and professional. He's communicative, makes you feel at ease and doesn't shy away from putting forth his ideas. He also loves table tennis.`
+    bio: ` Introducing Ashwath, the driving force behind GDSC this year. He’s got a practical mindset and a knack for getting things done. And with that, he confidently ensures that tasks get completed effectively and efficiently. 
+
+    When he is not busy planning events, he enjoys a good game of table tennis and spends time gaming. Apart from all this, he’s a chill guy to have conversations with. His has interesting takes on various subjects that might even take you by surprise but will leave you entertained nonetheless. 
+    
+    The club has had a series of successful events under his charge, and we hope it continues the same way.`
     ,
     linkedin: "https://www.linkedin.com/in/ashwath-gupta-390854240/",
     github: "https://github.com/ashwathgupta",
