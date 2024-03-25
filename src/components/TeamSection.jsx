@@ -32,7 +32,7 @@ const delayEntryVariants = {
 };
 
 function TeamSection({ isDark, currentRef }) {
-  const [page, setPage] = useState("2022");
+  const [page, setPage] = useState("2023");
   const team = teamData[page];
   //const staffData = team.staffData;
   const leadData = team.leadData;
@@ -71,6 +71,7 @@ function TeamSection({ isDark, currentRef }) {
             }}
             label="Chapter"
           >
+            <option value={2023}>2023</option>
             <option value={2022}>2022</option>
             <option value={2021}>2021</option>
             <option value={2020}>2020</option>
